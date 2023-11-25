@@ -14,7 +14,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Avatar from '@mui/material/Avatar';
 import profilePic from './images/1.jpg';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import config from './config';
 
 const AppNavBar = () => {
@@ -29,6 +29,12 @@ const AppNavBar = () => {
     }
 
     setDrawerOpen(open);
+  };
+
+  const navigate = useNavigate();
+
+  const handleAvatarClick = () => {
+    navigate('/');
   };
 
   return (
@@ -60,11 +66,14 @@ const AppNavBar = () => {
                 <ListItem button component={Link} to="/placeorder">
                   <ListItemText primary={config.menuItem3} />
                 </ListItem>
+                <ListItem button component={Link} to="/placeorder">
+                  <ListItemText primary={config.menuItem4} />
+                </ListItem>
               </List>
             </Drawer>
           </Box>
           <Box sx={{ flexGrow: 0 }}>
-            <IconButton sx={{ p: 1 }}>
+            <IconButton sx={{ p: 1 }} onClick={handleAvatarClick}>
               <Avatar alt="K" src={profilePic} />
             </IconButton>
           </Box>

@@ -21,6 +21,10 @@ const Footer = () => {
       <Typography variant="body2" color="text.secondary" align="center">
       {config.createby}
       </Typography>
+      <Typography variant="body2" color="text.secondary" align="center">
+      <a href="/contactus">{config.menuItem4}</a>
+      </Typography>
+
     </Box>
   );
 };
