@@ -4,6 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('G-10XRCXJY89'); // Replace with your actual Analytics ID
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const theme = createTheme();
 const root = ReactDOM.createRoot(document.getElementById('root'));
