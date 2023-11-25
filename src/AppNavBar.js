@@ -66,7 +66,7 @@ const AppNavBar = () => {
                 <ListItem button component={Link} to="/placeorder">
                   <ListItemText primary={config.menuItem3} />
                 </ListItem>
-                <ListItem button component={Link} to="/placeorder">
+                <ListItem button component={Link} to="/contactus">
                   <ListItemText primary={config.menuItem4} />
                 </ListItem>
               </List>
