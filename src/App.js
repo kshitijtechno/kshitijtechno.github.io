@@ -1,19 +1,28 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
-import NavigationBar from './NavigationBar';
-import Home from './Home'; // Import your Home component
-
+import './App.css';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom'; // Update the import statements
+import AboutUs from './Home';
+// import Dashboard from './Dashboard/Dashboard';
+// import PlaceOrder from './PlaceOrder/PlaceOrder';
+// import SignUp from './SignUp/SignUp';
+// import { LogIn } from './LogIn/LogIn';
+// import {LogOut} from './LogOut/LogOut';
+import Layout from './Layout';
 function App() {
   return (
     <Router>
-      <div>
-        <NavigationBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </div>
-    </Router>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<div className="content"><AboutUs /></div>} />
+            {/* <Route path="/dashboard" element={<div className="content"><Dashboard /></div>} />
+            <Route path="/placeorder" element={<div className="content"><PlaceOrder /></div>} />
+            <Route path="/signup" element={<div className="content"><SignUp /></div>} />
+            <Route path="/login" element={<div className="content"><LogIn /></div>} />
+            <Route path="/logout" element={<div className="content"><LogOut /></div>} /> */}
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+        </Layout>        
+      </Router>
   );
 }
 

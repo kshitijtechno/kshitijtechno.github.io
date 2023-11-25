@@ -5,6 +5,8 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  height: 100px;
+  width: 150px; 
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -37,66 +39,113 @@
   }
 }
 
-
-/* NavigationBar.css */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
+h3{
+  margin-left: 15px;
 }
 
-.navbar-logo a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: bold;
+/* .fileInput{
+  border-bottom: 4px solid lightgray;
+  border-right: 4px solid lightgray;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  padding: 10px;
+  margin: 15px;
+  cursor: pointer;
+} */
+  
+/* .imgPreview{
+  text-align: center;
+  margin: 5px 15px;
+  height: 200px;
+  width: 500px;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  border-top: 5px solid gray;
+  border-bottom: 5px solid gray;
+} */
+  
+.previewText{
+  width: 100%;
+  margin-top: 20px;
 }
-
-.navbar-links {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 40%;
-}
-
-.navbar-links a {
-  color: #fff;
-  text-decoration: none;
-  margin-right: 20px;
-}
-
-.navbar-mobile-menu {
-  display: none;
-  flex-direction: column;
+  
+.submitButton{
+  padding: 12px;
+  margin-left: 10px;
+  background: white;
+  border: 4px solid lightgray;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 10pt;
   cursor: pointer;
 }
 
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  margin: 5px 0;
+.centerText{
+  text-align: center;
+  width: 500px;
 }
 
-@media (max-width: 768px) {
-  .navbar-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background-color: #333;
-  }
+.heading{
+  padding: 6px;
+  text-align: center;
+  background: #1aacbc;
+  color: white;
+  font-size: 25px;
+  height: auto;
+  width: auto;
+  margin-top: 5px;
+}
 
-  .navbar-links.active {
-    display: flex;
-  }
+.required:after {
+  content:" *";
+  color: red;
+}
 
-  .navbar-mobile-menu {
-    display: flex;
-  }
+/* .profileImgPreview{
+  display: block;
+  width:200px;
+  height:300px;
+  padding: 1px;
+} */
+
+.imgPreview{
+  display: block;
+  width:100px;
+  height:100px;
+  border: 1px solid;
+  padding: 1px;
+}
+
+.content{
+  margin-top: 80px;
+}
+
+.spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure the overlay is on top of other elements */
+}
+
+.appBar{
+  background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+}
+
+.fullscreen {
+  width: 20%;
+  height: 100%;
+}
+
+.introBody{
+  font-size: 14px;
+}
+
+.aboutus{
+  font-size: 15px;
 }
