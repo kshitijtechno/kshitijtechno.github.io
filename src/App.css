@@ -149,3 +149,20 @@ h3{
 .aboutus{
   font-size: 15px;
 }
+
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
+
+.slider-container {
+  height: 400px; /* Set the desired height */
+  max-width: 100%; /* Ensure the slider doesn't exceed the container's width */
+}
+
+/* Optionally, you can add styles for the images within the slider */
+.slider-container img {
+  width: 100%; /* Make images fill their container */
+  height: 400px; /* Ensure images take up the full height of the container */
+  object-fit: cover; /* Maintain aspect ratio while covering the container */
+}

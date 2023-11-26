@@ -1,14 +1,45 @@
 import { Container, Paper, Typography } from '@mui/material';
 import profilePic from './images/introme1.jpeg';
 import './App.css';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import profilePic1 from './images/homepagebanner1.jpg';
+import profilePic2 from './images/homepagebanner1.jpg';
+import profilePic3 from './images/homepagebanner1.jpg';
+
+
 
 const Home = () => {
     function toggleFullScreen() {
         const image = document.getElementById('fullscreenImage');
         image.classList.toggle('fullscreen');
       }
+
+      const sliderSettings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+      };
   return (
-    
+    <div>
+      <div className="slider-container">
+    <Slider {...sliderSettings}>
+      <div>
+        <img src={profilePic1} alt="Slideshow 1" />
+      </div>
+      <div>
+        <img src={profilePic2} alt="Slideshow 2" />
+      </div>
+      <div>
+        <img src={profilePic3} alt="Slideshow 3" />
+      </div>
+      </Slider>
+      </div>
     <Container maxWidth="lg" sx={{ marginTop: 4 }}>
         
       <Paper elevation={2} sx={{ padding: 3, borderRadius: 4 }}>
@@ -68,6 +99,7 @@ const Home = () => {
         </Typography>
       </Paper>
     </Container>
+    </div>
   );
 };
 
