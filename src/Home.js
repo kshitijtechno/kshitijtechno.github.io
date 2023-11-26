@@ -35,7 +35,7 @@ const Home = () => {
     <li>Training on development tools</li>
     <li>Minor/Major project creation for Computer Science Students</li>
     <li>Website creation</li>
-    <li>Webapplication creation</li>
+    <li>Web application creation</li>
     <li>Software Developer Career guidance</li>
   </ol>
             </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom'; // Update the import statements
+import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom'; // Update the import statements
 import AboutUs from './Home';
 import ContactUs from './ContactUs';
 // import PlaceOrder from './PlaceOrder/PlaceOrder';
