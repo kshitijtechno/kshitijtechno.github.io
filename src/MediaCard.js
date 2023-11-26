@@ -8,8 +8,7 @@ export default function MediaCard({ title, content, maxWidth}) {
     <Card sx={{ maxWidth: {maxWidth} }}>
       <CardContent >
         <Typography gutterBottom variant="h5" component="div" sx={{ backgroundColor: '#4ac0e3' }}>
-          {title}
-          
+          {title}          
         </Typography>
         <Typography variant="body2" color="text.primary">
           {content}

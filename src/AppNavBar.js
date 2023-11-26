@@ -63,7 +63,7 @@ const AppNavBar = () => {
                 <ListItem button component={Link} to="/dashboard">
                   <ListItemText primary={config.menuItem2} />
                 </ListItem>
-                <ListItem button component={Link} to="/placeorder">
+                <ListItem button component={Link} to="/videos">
                   <ListItemText primary={config.menuItem3} />
                 </ListItem>
                 <ListItem button component={Link} to="/contactus">
@@ -87,7 +87,7 @@ const AppNavBar = () => {
             <Button color="inherit" component={Link} to="/dashboard">
             {config.menuItem2}
             </Button>
-            <Button color="inherit" component={Link} to="/placeorder">
+            <Button color="inherit" component={Link} to="/videos">
             {config.menuItem3}
             </Button>
           </Box>

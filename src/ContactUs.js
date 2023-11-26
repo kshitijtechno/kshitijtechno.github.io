@@ -17,6 +17,12 @@ const ContactUs = () => {
         content={config.contactus_modeldata_data}
         maxWidth={600}
                 />
+<p></p>
+<MediaCard
+        title={config.contactus_modeldata_careers_title}
+        content={config.contactus_modeldata_careers_message}
+        maxWidth={600}
+                />
                 </Grid>
     </Grid>
                 
