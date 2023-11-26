@@ -17,16 +17,13 @@ const Videos = () => {
                 />
                 </Grid>
                 <Grid item xs={12}>
-                <YoutubeMediaCard
-                    videoId={config.youtube_videoId_1}
-                    title={config.youtube_videoId_1_title}
-                    content={config.youtube_videoId_1_content}                    
-                />
-                <YoutubeMediaCard
-                    videoId={config.youtube_videoId_2}
-                    title={config.youtube_videoId_2_title}
-                    content={config.youtube_videoId_2_content}                    
-                />
+                    {config.youtubeVideos.map((video) => (
+                        <YoutubeMediaCard
+                        videoId={video.videoId}
+                        title={video.title}
+                        content={video.content}                    
+                    />
+                    ))};
                 </Grid>
                 
     </Grid>

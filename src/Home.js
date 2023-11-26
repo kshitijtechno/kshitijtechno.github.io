@@ -5,16 +5,28 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import profilePic1 from './images/homepagebanner1.jpg';
-import profilePic2 from './images/homepagebanner1.jpg';
-import profilePic3 from './images/homepagebanner1.jpg';
+import profilePic2 from './images/homepagebanner2.jpg';
+import profilePic3 from './images/homepagebanner3.jpeg';
+import MyDialog from './MyDialog';
+import { useEffect, useState } from 'react';
+import config from './config';
 
 
 
 const Home = () => {
+  const [dialogOpen, setDialogOpen] = useState(false); 
     function toggleFullScreen() {
         const image = document.getElementById('fullscreenImage');
         image.classList.toggle('fullscreen');
       }
+      useEffect(() => {
+        setDialogOpen(true);
+      }, []);
+
+      const handleClose = () => {
+
+        setDialogOpen(false);
+      };
 
       const sliderSettings = {
         dots: true,
@@ -27,6 +39,14 @@ const Home = () => {
       };
   return (
     <div>
+      <div>
+        <MyDialog
+        open={dialogOpen}
+        title="Request" 
+        content={config.home_modal}
+        handleClose={handleClose}
+        />
+      </div>
       <div className="slider-container">
     <Slider {...sliderSettings}>
       <div>
