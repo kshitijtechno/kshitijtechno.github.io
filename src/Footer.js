@@ -1,7 +1,7 @@
-// Footer.js
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import config from './config';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -22,7 +22,7 @@ const Footer = () => {
       {config.createby}
       </Typography>
       <Typography variant="body2" color="text.secondary" align="center">
-      <a href="/contactus">{config.menuItem4}</a>
+      <Link to="/contactus">{config.menuItem4}</Link>
       </Typography>
 
     </Box>
