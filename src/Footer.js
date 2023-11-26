@@ -2,6 +2,8 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import config from './config';
 import { Link } from 'react-router-dom';
+import ScrollToTopButton from './ScrollToTopButton';
+
 
 const Footer = () => {
   return (
@@ -24,8 +26,9 @@ const Footer = () => {
       <Typography variant="body2" color="text.secondary" align="center">
       <Link to="/contactus">{config.menuItem4}</Link>
       </Typography>
-
+      <ScrollToTopButton/>
     </Box>
+    
   );
 };
 

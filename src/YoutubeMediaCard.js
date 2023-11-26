@@ -14,7 +14,7 @@ export default function YoutubeMediaCard({ videoId, title, content }) {
             <Grid container>
                 <Grid item xs={12} md={6}>
                     <CardMedia>
-                        <iframe width="560" height="315" src={`https://www.youtube.com/embed/${videoId}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src={`https://www.youtube.com/embed/${videoId}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                     </CardMedia> 
                 </Grid>
                 <Grid item xs={12} md={6}>

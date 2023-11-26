@@ -119,7 +119,9 @@ const Home = () => {
   </div>
         </Typography>
       </Paper>
+      
     </Container>
+    
     </div>
   );
 };

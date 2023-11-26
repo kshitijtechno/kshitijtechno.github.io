@@ -11,7 +11,7 @@ const config = {
     contactus_modeldata_careers_message:  "If you want to contribute towards our work and vision. Please feel free to reach out anytime.",
     contactus_modeldata_data:"Contact us on +91-7987210964 or Whatsapp us on +91-9036623883",
     youtube_modeldata_message: "Kshitij Wardhan Ahirwar is my youtube channel. Please watch the videos & subscribe to my channel",
-    youtubeVideos: [
+    youtubeVideosTechnology: [
       {
         videoId: "dOEf3qabuW0?si=gHjS9ucy5ZmReyqV",
         title: "Git tutorial for beginners and experienced software professionals",
@@ -24,6 +24,20 @@ const config = {
         content: "Unboxing of WFH kit from Altimetrik.",
       },
     ],
+    youtubeVideosMisc: [
+      {
+        videoId: "EpGZ5Be603c?si=rNatqHZjoCEDCAVc",
+        title: "Glimpses of Sethani Ghat Narmadapuram Madhya Pradesh",
+        content:
+          "Sethani Ghat is located at Narmada river bank, District Narmadapuram Madhya Pradesh. Nice place to visit. We can best visit the place either morning or evening so aarti can be attended. I went to this trip on 5th April 2023.",
+      },
+      {
+        videoId: "ksb6Lh82yQs?si=TzhAL68ymVLuBMEW",
+        title: "Besli Dam Gohad",
+        content: "Besli Dam Gohad",
+      },
+    ],
+
     home_modal:"This site is under development. I want to know the public reviews so I can make it more better. Please explore the whole site and provide your valuable feedback. For giving feedback you can navigate to Contact Us page."
 
   

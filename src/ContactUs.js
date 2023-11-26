@@ -15,13 +15,15 @@ const ContactUs = () => {
                 <MediaCard
         title={config.contactus_modeldata_title}
         content={config.contactus_modeldata_data}
-        maxWidth={600}
+        cardStyle={{ maxWidth: '600' }}
+        cardTitleStyle={{backgroundColor: '#4ac0e3'}}
                 />
 <p></p>
 <MediaCard
         title={config.contactus_modeldata_careers_title}
         content={config.contactus_modeldata_careers_message}
-        maxWidth={600}
+        cardStyle={{ maxWidth: '600' }}
+        cardTitleStyle={{backgroundColor: '#4ac0e3'}}
                 />
                 </Grid>
     </Grid>
