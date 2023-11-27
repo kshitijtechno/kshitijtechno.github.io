@@ -8,6 +8,9 @@ import Videos from './Videos';
 // import { LogIn } from './LogIn/LogIn';
 // import {LogOut} from './LogOut/LogOut';
 import Layout from './Layout';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('G-10XRCXJY89');
 
 function App() {
   return (
