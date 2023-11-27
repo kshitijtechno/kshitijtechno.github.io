@@ -5,11 +5,9 @@ import YoutubeMediaCard from './YoutubeMediaCard';
 import {
   Grid,
 } from '@mui/material';
-import { Helmet } from 'react-helmet';
 
 const Videos = () => {
   return (
-    <div>
     <Grid container spacing={2}>
       <Grid item xs={12}>
         <MediaCard
@@ -52,10 +50,6 @@ const Videos = () => {
           ))};
        </Grid>
     </Grid>
-    <Helmet>
-    <title>Videos</title>
-  </Helmet>
-  </div>
 
   );
 };

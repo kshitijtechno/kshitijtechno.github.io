@@ -10,7 +10,6 @@ import profilePic3 from './images/homepagebanner3.jpeg';
 import MyDialog from './MyDialog';
 import { useEffect, useState } from 'react';
 import config from './config';
-import { Helmet } from 'react-helmet';
 
 
 
@@ -40,9 +39,6 @@ const Home = () => {
       };
   return (
     <div>
-      <Helmet>
-        <title>About Us</title>
-      </Helmet>
       <div>
         <MyDialog
         open={dialogOpen}
