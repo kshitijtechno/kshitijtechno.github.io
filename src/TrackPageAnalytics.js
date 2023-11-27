@@ -6,7 +6,7 @@ const TrackPageAnalytics = () => {
   const location = useLocation();
 
   useEffect(() => {
-    ReactGA.pageview(location.hash);
+    ReactGA.pageview(location.pathname);
   }, [location]);
 
   return null;
