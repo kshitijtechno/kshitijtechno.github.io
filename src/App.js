@@ -8,13 +8,12 @@ import Videos from './Videos';
 // import { LogIn } from './LogIn/LogIn';
 // import {LogOut} from './LogOut/LogOut';
 import Layout from './Layout';
-import TrackPageAnalytics from './TrackPageAnalytics';
 
 function App() {
   return (
     <Router>
         <Layout>
-          <TrackPageAnalytics/>
+          
           <Routes>
             <Route path="/" element={<div className="content"><AboutUs /></div>} />
              <Route path="/contactus" element={<div className="content"><ContactUs /></div>} />

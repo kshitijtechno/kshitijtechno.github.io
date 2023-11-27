@@ -10,6 +10,8 @@ import profilePic3 from './images/homepagebanner3.jpeg';
 import MyDialog from './MyDialog';
 import { useEffect, useState } from 'react';
 import config from './config';
+import TrackPageAnalytics from './TrackPageAnalytics';
+
 
 
 
@@ -40,6 +42,7 @@ const Home = () => {
   return (
     <div>
       <div>
+      <TrackPageAnalytics/>
         <MyDialog
         open={dialogOpen}
         title="Request" 

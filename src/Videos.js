@@ -5,9 +5,11 @@ import YoutubeMediaCard from './YoutubeMediaCard';
 import {
   Grid,
 } from '@mui/material';
+import TrackPageAnalytics from './TrackPageAnalytics';
 
 const Videos = () => {
   return (
+    <div>
     <Grid container spacing={2}>
       <Grid item xs={12}>
         <MediaCard
@@ -50,6 +52,7 @@ const Videos = () => {
           ))};
        </Grid>
     </Grid>
+    <TrackPageAnalytics/></div>
 
   );
 };

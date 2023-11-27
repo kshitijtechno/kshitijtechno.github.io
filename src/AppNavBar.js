@@ -16,7 +16,6 @@ import Avatar from '@mui/material/Avatar';
 import profilePic from './images/1.jpg';
 import { Link, useNavigate } from 'react-router-dom';
 import config from './config';
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
