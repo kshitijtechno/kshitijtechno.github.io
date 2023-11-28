@@ -11,8 +11,10 @@ import MyDialog from './MyDialog';
 import { useEffect, useState } from 'react';
 import config from './config';
 import TrackPageAnalytics from './TrackPageAnalytics';
-
-
+import ClientComment from './ClientComment';
+import {
+  Grid,
+} from '@mui/material';
 
 
 const Home = () => {
@@ -123,7 +125,20 @@ const Home = () => {
         </Typography>
       </Paper>
       
+      
     </Container>
+    <Grid container spacing={2}>
+        <Grid item xs={4}>
+          
+        </Grid>
+        
+        <Grid item xs={4}>
+            <ClientComment />
+        </Grid>
+    </Grid>
+    
+    
+    
     
     </div>
   );

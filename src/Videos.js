@@ -37,7 +37,7 @@ const Videos = () => {
        <Grid item xs={4}/>
        <Grid item xs={4}>
        <MediaCard
-          content="VBlog/Unboxing/Others"
+          content="Other videos"
           cardStyle={{ maxWidth: '100%', backgroundColor: '#1CB5E0', textAlign:'center' }}
         />
        </Grid>

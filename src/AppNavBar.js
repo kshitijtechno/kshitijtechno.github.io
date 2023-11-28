@@ -60,20 +60,20 @@ const AppNavBar = () => {
               onClose={toggleDrawer(false)}
             >
               <List>
-                <ListItem button component={Link} to="/">
-                <FontAwesomeIcon icon={faStar} size="sm" style={{color: "#ece509",}} />&nbsp;
+                <ListItem button component={Link} to="/" onClick={toggleDrawer(false)}>
+                  <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
                   <ListItemText primary={config.menuItem1} />
                 </ListItem>
-                <ListItem button component={Link} to="/dashboard">
-                <FontAwesomeIcon icon={faStar} size="sm" style={{color: "#ece509",}} />&nbsp;
+                <ListItem button component={Link} to="/dashboard" onClick={toggleDrawer(false)}>
+                  <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
                   <ListItemText primary={config.menuItem2} />
                 </ListItem>
-                <ListItem button component={Link} to="/videos">
-                <FontAwesomeIcon icon={faStar} size="sm" style={{color: "#ece509",}} />&nbsp;
+                <ListItem button component={Link} to="/videos" onClick={toggleDrawer(false)}>
+                  <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
                   <ListItemText primary={config.menuItem3} />
                 </ListItem>
-                <ListItem button component={Link} to="/contactus">
-                <FontAwesomeIcon icon={faStar} size="sm" style={{color: "#ece509",}} />&nbsp;
+                <ListItem button component={Link} to="/contactus" onClick={toggleDrawer(false)}>
+                  <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
                   <ListItemText primary={config.menuItem4} />
                 </ListItem>
               </List>
@@ -88,17 +88,17 @@ const AppNavBar = () => {
             {config.siteName}
           </Typography>
           <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
-            <Button color="inherit" component={Link} to="/">
-            <FontAwesomeIcon icon={faStar} size="sm" style={{color: "#ece509",}} />&nbsp;
-            {config.menuItem1}
+            <Button color="inherit" component={Link} to="/" onClick={toggleDrawer(false)}>
+              <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
+              {config.menuItem1}
             </Button>
-            <Button color="inherit" component={Link} to="/dashboard">
-            <FontAwesomeIcon icon={faStar} size="sm" style={{color: "#ece509",}} />&nbsp;
-            {config.menuItem2}
+            <Button color="inherit" component={Link} to="/dashboard" onClick={toggleDrawer(false)}>
+              <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
+              {config.menuItem2}
             </Button>
-            <Button color="inherit" component={Link} to="/videos">
-            <FontAwesomeIcon icon={faStar} size="sm"style={{color: "#ece509",}} />&nbsp;
-            {config.menuItem3}
+            <Button color="inherit" component={Link} to="/videos" onClick={toggleDrawer(false)}>
+              <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
+              {config.menuItem3}
             </Button>
           </Box>
         </Toolbar>
