@@ -6,6 +6,11 @@ const config = {
     menuItem3: "Videos",
     menuItem4: "Contact",
     createby: "Created by : Kshitij Wardhan Ahirwar",
+    
+    home_showDialog: false,
+    home_dialog_title: "Request",
+    home_dialog_content:"This site is under development. I want to know the public reviews so I can make it more better. Please explore the whole site and provide your valuable feedback. For giving feedback you can navigate to Contact page.",
+
     contactus_modeldata_title:  "Information",
     contactus_modeldata_careers_title:  "Want to contribute?",
     contactus_modeldata_careers_message:  "If you want to contribute towards our work and vision. You are always welcomed. Please feel free to reach out anytime.",
@@ -38,7 +43,6 @@ const config = {
       },
     ],
 
-    home_modal:"This site is under development. I want to know the public reviews so I can make it more better. Please explore the whole site and provide your valuable feedback. For giving feedback you can navigate to Contact page.",
     clientCommentDisplay:"https://docs.google.com/spreadsheets/d/e/2PACX-1vTd1pmnxR9m5aMyIVQ5uaIWY9OXW2T3zf4eszQLDVvlfslmGqhV3yKlHtHI_2HRc1P7x5Vy5U9ZgFYM/pub?gid=508978835&single=true&output=csv",
   
   };

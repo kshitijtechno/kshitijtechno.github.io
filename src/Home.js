@@ -24,7 +24,7 @@ const Home = () => {
         image.classList.toggle('fullscreen');
       }
       useEffect(() => {
-        setDialogOpen(true);
+        setDialogOpen(config.home_showDialog);
       }, []);
 
       const handleClose = () => {
@@ -47,8 +47,8 @@ const Home = () => {
       <TrackPageAnalytics/>
         <MyDialog
         open={dialogOpen}
-        title="Request" 
-        content={config.home_modal}
+        title={config.home_dialog_title}
+        content={config.home_dialog_content}
         handleClose={handleClose}
         />
       </div>

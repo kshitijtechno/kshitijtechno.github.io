@@ -19,6 +19,10 @@ import config from './config';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+
 
 const AppNavBar = () => {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
@@ -38,6 +42,15 @@ const AppNavBar = () => {
 
   const handleAvatarClick = () => {
     navigate('/');
+  };
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
   };
 
   return (
@@ -88,14 +101,42 @@ const AppNavBar = () => {
             {config.siteName}
           </Typography>
           <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
-            <Button color="inherit" component={Link} to="/" onClick={toggleDrawer(false)}>
+            <Button color="inherit" component={Link} to="/">
               <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
               {config.menuItem1}
             </Button>
-            <Button color="inherit" component={Link} to="/dashboard" onClick={toggleDrawer(false)}>
+            {/* <Button color="inherit" component={Link} to="/dashboard" onClick={handleClick}>
+              <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
+              {config.menuItem2}
+            </Button> */}
+            <Button color="inherit"  onClick={handleClick} id="basic-button"
+        aria-controls={open ? 'basic-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        endIcon={<KeyboardArrowDownIcon />}>
               <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
               {config.menuItem2}
             </Button>
+            <Menu
+              id="basic-menu"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              MenuListProps={{
+                'aria-labelledby': 'basic-button',
+              }}
+            >
+              <MenuItem onClick={handleClose}>
+                <Button color="inherit" component={Link} to="/products">    
+                Products
+                </Button>
+              </MenuItem>
+              <MenuItem onClick={handleClose}>
+                <Button color="inherit" component={Link} to="/services">    
+                Services
+                </Button>
+              </MenuItem>
+            </Menu>
             <Button color="inherit" component={Link} to="/videos" onClick={toggleDrawer(false)}>
               <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
               {config.menuItem3}
