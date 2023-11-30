@@ -7,6 +7,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import profilePic1 from './images/homepagebanner1.jpg';
 import profilePic2 from './images/homepagebanner2.jpg';
 import profilePic3 from './images/homepagebanner3.jpeg';
+import profilePic4 from './images/logo-no-bg.png'
 import MyDialog from './MyDialog';
 import { useEffect, useState } from 'react';
 import config from './config';
@@ -62,6 +63,9 @@ const Home = () => {
       </div>
       <div>
         <img src={profilePic3} alt="Slideshow 3" />
+      </div>
+      <div>
+        <img src={profilePic4} alt="Slideshow 4" />
       </div>
       </Slider>
       </div>
