@@ -2,7 +2,6 @@ import React from 'react';
 import {
   AppBar,
   Toolbar,
-  Typography,
   Button,
   Drawer,
   List,
@@ -12,8 +11,7 @@ import {
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import Avatar from '@mui/material/Avatar';
-import profilePic from './images/1.jpg';
+import profilePic from './images/1.png';
 import { Link, useNavigate } from 'react-router-dom';
 import config from './config';
 
@@ -92,23 +90,14 @@ const AppNavBar = () => {
               </List>
             </Drawer>
           </Box>
-          <Box sx={{ flexGrow: 0 }}>
-            <IconButton sx={{ p: 1 }} onClick={handleAvatarClick}>
-              <Avatar alt="K" src={profilePic} />
-            </IconButton>
+          <Box sx={{ flexGrow: 1 }}>            
+            <img src={profilePic} alt="Kshitij Wardhan Ahirwar" height="50" onClick={handleAvatarClick}/>
           </Box>
-          <Typography variant="h6" sx={{ flexGrow: 1, color: 'black' }}>
-            {config.siteName}
-          </Typography>
           <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
             <Button color="inherit" component={Link} to="/">
               <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
               {config.menuItem1}
             </Button>
-            {/* <Button color="inherit" component={Link} to="/dashboard" onClick={handleClick}>
-              <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
-              {config.menuItem2}
-            </Button> */}
             <Button color="inherit"  onClick={handleClick} id="basic-button"
         aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"

@@ -1,12 +1,9 @@
 import React from 'react';
 import './App.css';
-import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom'; // Update the import statements
+import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import AboutUs from './Home';
 import ContactUs from './ContactUs';
 import Videos from './Videos';
-// import SignUp from './SignUp/SignUp';
-// import { LogIn } from './LogIn/LogIn';
-// import {LogOut} from './LogOut/LogOut';
 import Layout from './Layout';
 import ReactGA from 'react-ga';
 
