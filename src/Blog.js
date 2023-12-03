@@ -13,7 +13,7 @@ const Blog = () => {
                 />
               {config.blog_questionAnswer.map((data, index) => (
                   <div key={index}>
-                    <h3>{index}).{data.question}</h3>
+                    <h3>{index}) {data.question}</h3>
                     <p dangerouslySetInnerHTML={{ __html: data.answer }}></p>
                   </div>            
                 ))}
