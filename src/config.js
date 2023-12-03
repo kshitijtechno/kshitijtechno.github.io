@@ -1,10 +1,11 @@
-// config.js
 const config = {
     siteName: "Kshitij Techno",
     menuItem1: "About",
     menuItem2: "Products & Services",
-    menuItem3: "Videos",
-    menuItem4: "Contact",
+    menuItem3: "Blog",
+    menuItem4: "Videos",
+    contact: "Contact",
+    disclaimer: "Disclaimer",
     createby: "Created by : Kshitij Wardhan Ahirwar",
     
     home_showDialog: false,
@@ -14,7 +15,7 @@ const config = {
     contactus_modeldata_title:  "Information",
     contactus_modeldata_careers_title:  "Want to contribute?",
     contactus_modeldata_careers_message:  "If you want to contribute towards our work and vision. You are always welcomed. Please feel free to reach out anytime.",
-    contactus_modeldata_data:"Contact us on +91-7987210964 or Whatsapp us on +91-9036623883",
+    contactus_modeldata_data:"Whatsapp us on +91-9036623883",
     youtube_modeldata_message: "To to show your support please visit <a href='https://www.youtube.com/@kshitijwardhan' target='_blank' rel='noopener noreferrer'> Kshitij Wardhan Ahirwar </a> my youtube channel. Please do watch, like, comment, share & subscribe to my channel",
     youtubeVideosTechnology: [
       {
@@ -40,6 +41,20 @@ const config = {
         videoId: "ksb6Lh82yQs?si=TzhAL68ymVLuBMEW",
         title: "Besli Dam Gohad",
         content: "Besli Dam Gohad",
+      },
+    ],
+    blog_questionAnswer: [
+      {
+        question: "What is SAP Hybris?",
+        answer: "SAP Hybris or later renamed as SAP Commerce cloud is an e-commerce, digital marketing solution.",
+      },
+      {
+        question: "What is e-commerce solution?",
+        answer: "E-commerce is a platform where end user can place the orders. Customer could be a retail customer, business customer etc.",
+      },
+      {
+        question: "What are the examples of e-commerce solutions",
+        answer: "Amazon, Flipkart, Nayka, Meesho, Taka Cliq are some examples of e-commerce solutions.",
       },
     ],
 

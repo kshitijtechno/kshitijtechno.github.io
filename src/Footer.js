@@ -24,7 +24,10 @@ const Footer = () => {
       {config.createby}
       </Typography>
       <Typography variant="body2" color="text.secondary" align="center">
-      <Link to="/contactus">{config.menuItem4}</Link>
+      <Link to="/contactus">{config.contact}</Link>
+      </Typography>
+      <Typography variant="body2" color="text.secondary" align="center">
+      <Link to="/disclaimer">{config.disclaimer}</Link>
       </Typography>
       <ScrollToTopButton/>
     </Box>

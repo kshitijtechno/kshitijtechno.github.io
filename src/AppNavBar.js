@@ -79,11 +79,11 @@ const AppNavBar = () => {
                   <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
                   <ListItemText primary={config.menuItem2} />
                 </ListItem>
-                <ListItem button component={Link} to="/videos" onClick={toggleDrawer(false)}>
+                <ListItem button component={Link} to="/blog" onClick={toggleDrawer(false)}>
                   <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
                   <ListItemText primary={config.menuItem3} />
                 </ListItem>
-                <ListItem button component={Link} to="/contactus" onClick={toggleDrawer(false)}>
+                <ListItem button component={Link} to="/videos" onClick={toggleDrawer(false)}>
                   <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
                   <ListItemText primary={config.menuItem4} />
                 </ListItem>
@@ -126,9 +126,13 @@ const AppNavBar = () => {
                 </Button>
               </MenuItem>
             </Menu>
-            <Button color="inherit" component={Link} to="/videos" onClick={toggleDrawer(false)}>
+            <Button color="inherit" component={Link} to="/blog" onClick={toggleDrawer(false)}>
               <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
               {config.menuItem3}
+            </Button>
+            <Button color="inherit" component={Link} to="/videos" onClick={toggleDrawer(false)}>
+              <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
+              {config.menuItem4}
             </Button>
           </Box>
         </Toolbar>
