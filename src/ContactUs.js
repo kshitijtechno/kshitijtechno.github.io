@@ -38,7 +38,7 @@ const ContactUs = () => {
         </Grid>
         
     </Grid>
-    <TrackPageAnalytics/></div>
+    <TrackPageAnalytics pagename="Contact"/></div>
                 
   );
 };

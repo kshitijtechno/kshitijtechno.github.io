@@ -52,7 +52,7 @@ const Videos = () => {
           ))};
        </Grid>
     </Grid>
-    <TrackPageAnalytics/></div>
+    <TrackPageAnalytics pagename="Videos"/></div>
 
   );
 };

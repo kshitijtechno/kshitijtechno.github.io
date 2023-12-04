@@ -45,7 +45,7 @@ const Home = () => {
   return (
     <div>
       <div>
-      <TrackPageAnalytics/>
+      <TrackPageAnalytics pagename="About"/>
         <MyDialog
         open={dialogOpen}
         title={config.home_dialog_title}

@@ -1,8 +1,11 @@
 import { Container, Paper } from '@mui/material';
+import TrackPageAnalytics from './TrackPageAnalytics';
+
 
 const Disclaimer = () => {
     return (
         <div>
+            <TrackPageAnalytics pagename="Disclaimer"/>
             <Container maxWidth="lg" sx={{ marginTop: 4 }}>        
               <Paper elevation={2} sx={{ padding: 3, borderRadius: 4 }}>
                  <h1>Disclaimer for Kshitij Techno or Kshitij Wardhan Ahirwar</h1>

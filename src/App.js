@@ -7,9 +7,9 @@ import Videos from './Videos';
 import Blog from './Blog';
 import Disclaimer from './Disclaimer';
 import Layout from './Layout';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
-ReactGA.initialize('G-10XRCXJY89');
+ReactGA.initialize('G-P3PN6X95YY');
 
 function App() {
   return (

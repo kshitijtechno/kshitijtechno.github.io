@@ -1,10 +1,13 @@
 import { Container, Paper } from '@mui/material';
 import config from './config';
 import MediaCard from './MediaCard';
+import TrackPageAnalytics from './TrackPageAnalytics';
+
 
 const Blog = () => {
     return (
         <div>
+          <TrackPageAnalytics pagename="Blog"/>
             <Container maxWidth="lg" sx={{ marginTop: 4 }}>        
               <Paper elevation={2} sx={{ padding: 3, borderRadius: 4 }}>
               <MediaCard
