@@ -3,11 +3,9 @@ import { Box, Typography } from '@mui/material';
 import config from './config';
 import { Link } from 'react-router-dom';
 import ScrollToTopButton from './ScrollToTopButton';
-import GoogleAnalyticsEventTracker from './GoogleAnalyticsEventTracker';
 
 
 const Footer = () => {
-  const gaEventTracker = GoogleAnalyticsEventTracker('Contact us');
   return (
     <Box
       component="footer"
@@ -26,10 +24,10 @@ const Footer = () => {
       {config.createby}
       </Typography>
       <Typography variant="body2" color="text.secondary" align="center">
-      <Link to="/contactus" onClick={()=>gaEventTracker('contactus')}>{config.contact}</Link>
+      <Link to="/contactus">{config.contact}</Link>
       </Typography>
       <Typography variant="body2" color="text.secondary" align="center">
-      <Link to="/disclaimer" onClick={()=>gaEventTracker('disclaimer')}>{config.disclaimer}</Link>
+      <Link to="/disclaimer">{config.disclaimer}</Link>
       </Typography>
       <ScrollToTopButton/>
     </Box>

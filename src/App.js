@@ -1,4 +1,4 @@
-import React , {useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import AboutUs from './Home';
@@ -8,13 +8,10 @@ import Blog from './Blog';
 import Disclaimer from './Disclaimer';
 import Layout from './Layout';
 import ReactGA from 'react-ga';
-const TRACKING_ID = "UA-294172399-1"; // OUR_TRACKING_ID
-ReactGA.initialize(TRACKING_ID);
+
+ReactGA.initialize('G-10XRCXJY89');
 
 function App() {
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
   return (
     <Router>
         <Layout>

@@ -33,6 +33,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "generate-sitemap": "node public/scripts/generate-sitemap.js"
+    
   },
   "eslintConfig": {
     "extends": [
