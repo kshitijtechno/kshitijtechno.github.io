@@ -53,8 +53,16 @@ const config = {
         answer: "E-commerce is a platform where end user can place the orders. Customer could be a retail customer, business customer etc.",
       },
       {
-        question: "What are the examples of e-commerce solutions",
+        question: "What are the examples of e-commerce solutions?",
         answer: "Amazon, Flipkart, Nayka, Meesho, Taka Cliq are some examples of e-commerce solutions.",
+      },
+      {
+        question: "SAP Commerce cloud is based on what programming language?",
+        answer: "It's based on Java programming language. SAP commerce cloud uses Spring framework.",
+      },
+      {
+        question: "What is difference between SAP Hybris or SAP Commerce Cloud?",
+        answer: "Both are same. SAP Hybris is renamed as SAP Commerce Cloud.",
       },
     ],
 

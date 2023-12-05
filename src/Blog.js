@@ -2,9 +2,11 @@ import { Container, Paper } from '@mui/material';
 import config from './config';
 import MediaCard from './MediaCard';
 import TrackPageAnalytics from './TrackPageAnalytics';
+//import CodeSnippet from './CodeSnippet';
 
 
 const Blog = () => {
+    //const exampleCode = `//Your code`;
     return (
         <div>
           <TrackPageAnalytics pagename="Blog"/>
@@ -20,6 +22,10 @@ const Blog = () => {
                     <p dangerouslySetInnerHTML={{ __html: data.answer }}></p>
                   </div>            
                 ))}
+                {/* <div>
+                <CodeSnippet language="javascript" code={exampleCode} />
+                </div> */}
+                
               </Paper>
             </Container>
         </div>
