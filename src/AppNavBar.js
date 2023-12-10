@@ -44,8 +44,11 @@ const AppNavBar = () => {
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+  const showOption = (showOrHide) => (event) => {
+    if(showOrHide === true)
+    {
+      setAnchorEl(event.currentTarget);
+    }    
   };
   const handleClose = () => {
     setAnchorEl(null);
@@ -98,7 +101,7 @@ const AppNavBar = () => {
               <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
               {config.menuItem1}
             </Button>
-            <Button color="inherit"  onClick={handleClick} id="basic-button"
+            <Button color="inherit"  onMouseEnter={showOption(true)} id="basic-button"
         aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}

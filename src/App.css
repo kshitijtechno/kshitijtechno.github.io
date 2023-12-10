@@ -169,28 +169,32 @@ h3{
 /* Add this CSS to your stylesheet or style tag */
 .comment-container {
   overflow: hidden;
-  height: 200px;
+  width: 100%;
+  white-space: nowrap;
 }
 
 .comment-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  animation: scrollComments 25s linear infinite; /* Adjust the duration as needed */
+  animation: scrollComments 25s linear infinite;
+  display: inline-block; /* Ensures the comments are in a single line */
 }
 
 .comment-item {
-  margin-bottom: 10px; /* Adjust spacing between items */
+  margin-right: 10px; /* Adjust spacing between items */
+  display: inline-block; /* Ensures the comments are in a single line */
 }
 
 @keyframes scrollComments {
   0% {
-    transform: translateY(100%);
+    transform: translateX(100%);
   }
   100% {
-    transform: translateY(-300%);
+    transform: translateX(-100%);
   }
 }
+
 
 .siteLogo{
   width: 100%; 

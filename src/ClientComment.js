@@ -3,6 +3,9 @@ import Papa from 'papaparse';
 import MediaCard from './MediaCard';
 import config from './config';
 
+const getRandomColor = () => {
+  return '#' + Math.floor(Math.random() * 16777215).toString(16);
+};
 
 
 const ClientComment = () => {
@@ -12,7 +15,6 @@ const ClientComment = () => {
         const fetchComments = async () => {
           try {
             const csvLink = config.clientCommentDisplay;
-              //'https://docs.google.com/spreadsheets/d/e/2PACX-1vTd1pmnxR9m5aMyIVQ5uaIWY9OXW2T3zf4eszQLDVvlfslmGqhV3yKlHtHI_2HRc1P7x5Vy5U9ZgFYM/pub?gid=508978835&single=true&output=csv';
     
             const response = await fetch(csvLink);
             const data = await response.text();
@@ -60,7 +62,7 @@ const ClientComment = () => {
                         <MediaCard
                             title={comment.Name}
                             content={`"${comment.Comment}"`}
-                            cardStyle={{ maxWidth: '100%', backgroundColor: '#1CB5E0', textAlign:'center' }}
+                            cardStyle={{ maxWidth: '100%', backgroundColor: getRandomColor(), textAlign:'center' }}
                             />
                     </li>
                 ))}

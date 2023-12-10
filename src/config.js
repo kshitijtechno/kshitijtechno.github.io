@@ -61,7 +61,7 @@ const config = {
         answer: "It's based on Java programming language. SAP commerce cloud uses Spring framework.",
       },
       {
-        question: "What is difference between SAP Hybris or SAP Commerce Cloud?",
+        question: "What is difference between SAP Hybris and SAP Commerce Cloud?",
         answer: "Both are same. SAP Hybris is renamed as SAP Commerce Cloud.",
       },
     ],

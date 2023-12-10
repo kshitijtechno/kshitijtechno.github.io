@@ -132,11 +132,11 @@ const Home = () => {
       
     </Container>
     <Grid container spacing={2}>
-        <Grid item xs={4}>
+        <Grid item xs={1}>
           
         </Grid>
         
-        <Grid item xs={4}>
+        <Grid item xs={10}>
             <ClientComment />
         </Grid>
     </Grid>
