@@ -1,7 +1,7 @@
 const config = {
     siteName: "Kshitij Techno",
-    menuItem1: "About",
-    menuItem2: "Products & Services",
+    menuItem1: "Home",
+    menuItem2: "Products",
     menuItem3: "Blog",
     menuItem4: "Videos",
     contact: "Contact",

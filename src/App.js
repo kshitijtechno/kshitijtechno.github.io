@@ -4,7 +4,8 @@ import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom'
 import AboutUs from './Home';
 import ContactUs from './ContactUs';
 import Videos from './Videos';
-import Blog from './Blog';
+import Hybris from './Blog/Hybris';
+import Java from './Blog/Java';
 import Disclaimer from './Disclaimer';
 import Layout from './Layout';
 import ReactGA from 'react-ga4';
@@ -18,8 +19,9 @@ function App() {
           
           <Routes>
             <Route path="/" element={<div className="content"><AboutUs /></div>} />
+            <Route path="/blog/hybris" element={<div className="content"><Hybris /></div>} />
+            <Route path="/blog/java" element={<div className="content"><Java /></div>} />
              <Route path="/contactus" element={<div className="content"><ContactUs /></div>} />
-             <Route path="/blog" element={<div className="content"><Blog /></div>} />
             <Route path="/videos" element={<div className="content"><Videos /></div>} />
             <Route path="/disclaimer" element={<div className="content"><Disclaimer /></div>} />
             {/*<Route path="/signup" element={<div className="content"><SignUp /></div>} />

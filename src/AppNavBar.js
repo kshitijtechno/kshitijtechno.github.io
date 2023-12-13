@@ -21,9 +21,11 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
-
 const AppNavBar = () => {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
+  const [productMenuOpen, setProductMenuOpen] = React.useState(null);
+  //const [servicesMenuOpen, setServicesMenuOpen] = React.useState(null);
+  const [hybrisMenuOpen, setHybrisMenuOpen] = React.useState(null);
 
   const toggleDrawer = (open) => (event) => {
     if (
@@ -32,7 +34,6 @@ const AppNavBar = () => {
     ) {
       return;
     }
-
     setDrawerOpen(open);
   };
 
@@ -42,16 +43,12 @@ const AppNavBar = () => {
     navigate('/');
   };
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-  const showOption = (showOrHide) => (event) => {
-    if(showOrHide === true)
-    {
-      setAnchorEl(event.currentTarget);
-    }    
+  const handleMenuOpen = (menu, anchorElSetter) => (event) => {
+    anchorElSetter(event.currentTarget);
   };
-  const handleClose = () => {
-    setAnchorEl(null);
+
+  const handleMenuClose = (anchorElSetter) => {
+    anchorElSetter(null);
   };
 
   return (
@@ -101,39 +98,66 @@ const AppNavBar = () => {
               <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
               {config.menuItem1}
             </Button>
-            <Button color="inherit"  onMouseEnter={showOption(true)} id="basic-button"
-        aria-controls={open ? 'basic-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
-        endIcon={<KeyboardArrowDownIcon />}>
+            <Button
+              color="inherit"
+              onClick={handleMenuOpen('product', setProductMenuOpen)}
+              id="product-menu"
+              aria-controls={productMenuOpen ? 'product-basic-menu' : undefined}
+              aria-haspopup="true"
+              aria-expanded={productMenuOpen ? 'true' : undefined}
+              endIcon={<KeyboardArrowDownIcon />}
+            >
               <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
               {config.menuItem2}
             </Button>
             <Menu
-              id="basic-menu"
-              anchorEl={anchorEl}
-              open={open}
-              onClose={handleClose}
+              id="product-basic-menu"
+              anchorEl={productMenuOpen}
+              open={Boolean(productMenuOpen)}
+              onClose={() => handleMenuClose(setProductMenuOpen)}
               MenuListProps={{
-                'aria-labelledby': 'basic-button',
+                'aria-labelledby': 'product-menu',
               }}
             >
-              <MenuItem onClick={handleClose}>
+              <MenuItem onClick={() => handleMenuClose(setProductMenuOpen)}>
                 <Button color="inherit" component={Link} to="/products">    
-                Products
-                </Button>
-              </MenuItem>
-              <MenuItem onClick={handleClose}>
-                <Button color="inherit" component={Link} to="/services">    
-                Services
+                  Products
                 </Button>
               </MenuItem>
             </Menu>
-            <Button color="inherit" component={Link} to="/blog" onClick={toggleDrawer(false)}>
+            <Button
+              color="inherit"
+              onClick={handleMenuOpen('hybris', setHybrisMenuOpen)}
+              id="hybris-menu"
+              aria-controls={hybrisMenuOpen ? 'hybris-basic-menu' : undefined}
+              aria-haspopup="true"
+              aria-expanded={hybrisMenuOpen ? 'true' : undefined}
+              endIcon={<KeyboardArrowDownIcon />}
+            >
               <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
               {config.menuItem3}
             </Button>
-            <Button color="inherit" component={Link} to="/videos" onClick={toggleDrawer(false)}>
+            <Menu
+              id="hybris-basic-menu"
+              anchorEl={hybrisMenuOpen}
+              open={Boolean(hybrisMenuOpen)}
+              onClose={() => handleMenuClose(setHybrisMenuOpen)}
+              MenuListProps={{
+                'aria-labelledby': 'hybris-menu',
+              }}
+            >
+              <MenuItem onClick={() => handleMenuClose(setHybrisMenuOpen)}>
+                <Button color="inherit" component={Link} to="/blog/hybris">    
+                  Hybris
+                </Button>
+              </MenuItem>
+              <MenuItem onClick={() => handleMenuClose(setHybrisMenuOpen)}>
+                <Button color="inherit" component={Link} to="/blog/java">    
+                  Java
+                </Button>
+              </MenuItem>
+            </Menu>
+            <Button color="inherit" component={Link} to="/videos">
               <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
               {config.menuItem4}
             </Button>
