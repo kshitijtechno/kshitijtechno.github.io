@@ -3,12 +3,12 @@ import TrackPageAnalytics from '../TrackPageAnalytics';
 import HybrisLocalSetupGuide from './HybrisLocalSetupGuide';
 import HybrisInterview from './HybrisInterview';
 
-const Blog = () => {
+const Hybris = () => {
   const scrollToSection = (id, event) => {
     event.preventDefault();
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: 'auto' });
     }
   };
     return (
@@ -28,6 +28,11 @@ const Blog = () => {
                         Hybris local setup guide
                       </a>
                     </li>
+                    <li>
+                      <a href="#hybris-local" onClick={(e) => scrollToSection('hybris-local', e)}>
+                        Hybris local setup common issues
+                      </a>
+                    </li>
                   </ul>
                 </nav>
                 <HybrisInterview/>
@@ -39,4 +44,4 @@ const Blog = () => {
     );
 }
 
-export default Blog;
+export default Hybris;

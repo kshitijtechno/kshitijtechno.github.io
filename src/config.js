@@ -75,6 +75,18 @@ const config = {
         answer: "It's based on Java programming language. SAP commerce cloud uses Spring framework.",
       },
       {
+        question: "SAP Commerce Cloud uses which database?",
+        answer: "It uses HSQL database OOTB(Out of the box). It also support different databases like Oracle, MySql etc. We can specify database related configurations inside local.properties file.",
+      },
+      {
+        question: "SAP Commerce Cloud uses which server?",
+        answer: "It uses Apache tomcat OOTB.",
+      },
+      {
+        question: "SAP Commerce Cloud uses which search engine?",
+        answer: "It uses Apache Solr search engine.",
+      },
+      {
         question: "What is difference between SAP Hybris and SAP Commerce Cloud?",
         answer: "Both are same. SAP Hybris is renamed as SAP Commerce Cloud.",
       },
@@ -150,6 +162,41 @@ const config = {
         question: "Explain atomictype.",
         answer: `An AtomicType represent a simple java object. The name ('atomic') means 'non-composed' objects.
         <p>Object, Number, Integer, Boolean, String, Map are the example of atomic type.`,
+      },
+    ],
+
+    hybrisLocalSetupGuide: [
+      {
+        textContent1:"This guide is to help you to setup Hybris 2211 in local. It will setup OOTB hybris ecommerce sites.",
+        textContent2:`Please note hybris project setup step's may vary when you work on the actual project in a company but the core concepts going to be same.
+        The given steps are for MacOS.`,
+        textContent3: `
+        <b>Steps 1.</b> Download SAP Commerce Cloud Suite 2211<br />
+        Download the suite from SAP official site or please ask your employer to provide you the suite
+        . SAP commerce cloud is not open source, it is protected with license. <br/>
+        <b>Steps 2.</b> Download and install JDK<br />
+        Download openJdk from <a href="https://sap.github.io/SapMachine/" target='_blank' rel='noopener noreferrer'>https://sap.github.io/SapMachine/</a>. Please select options as below and click on download button. SAP Commerce cloud 2211 need atleast JDK 17.`,
+        textContent4:`You can also use oracle JDK but SAP recommends to use above JDK for better compatibility.
+        After installing openJdk please double check the version using command "java -version".<br/>`,
+        textContent5:`<b>Steps 3.</b> Unzip the suite and extract all the files to a folder. I have created a new folder "hybris_2211" inside that lets extract the suite. It should have below structure. 
+        Please have a closer look at the folder structure, you will notice inside hybris folder only bin folder exists.`,
+        textContent6:`<b>Steps 4.</b> Open terminal and navigate to /hybrisroot-folder/installer i.e. /hybris_2211/installer folder and trigger command "./install.sh -r cx setup -A initAdminPassword=nimda". nimda is password, you can change it if you want. Hit enter button and wait for it to complete. Please make sure you do not stop it inbetween. This command will setup the platform.<br/>
+        install.sh : It's a command which executes corresponding groovy script to setup the platform.<br/>
+        -r : represents recipe<br/>
+        cx : is recipe name. ./install.sh -l will give you the list of recipes which hybris provides OOTB.<br/>
+        -A : is for additional parameter<br/>
+        initAdminPassword : is attribute to set admin password.`,  
+        textContent7:'Once it is successful you should see the build successful message in terminal as below.',
+        textContent8:`<b>Steps 5.</b> Please execute "./install.sh -r cx initialize -A initAdminPassword=nimda"<br/>
+        initialize : initialize the platform<br/>`,
+        textContent9 :`On successful initialization you would see success message at terminal as below. Initilization takes time so be patience. For me it took around 2 hours.`,
+        textContent10 :`<b>Steps 6.</b> Please execute "./install.sh -r cx start" to start the platform.<br/>`,
+        textContent11 :`INFO: Server startup in 818893 ms". 818893 is time in milliseconds, server took to start. Again time may vary for individual.`,
+        textContent12 :`<b>Steps 7.</b> Congratulations!!! Server started successfully.<br/>
+        Sites are accessible on below urls:<br/>
+        <a href="https://localhost:9002/yacceleratorstorefront/?site=electronics&clear=true" target='_blank' rel='noopener noreferrer'>https://localhost:9002/yacceleratorstorefront/?site=electronics&clear=true</a> <br/>
+        <a href="https://localhost:9002/yacceleratorstorefront/?site=apparel-uk&clear=true" target='_blank' rel='noopener noreferrer'>https://localhost:9002/yacceleratorstorefront/?site=apparel-uk&clear=true</a> <br/>
+        As a part of recipe installation, Hybris will configure multiple sites. These all sites are mostly production ready. You can visit /hybris_2211/config/local.properties file to check the url of other sites.`,
       },
     ],
 
