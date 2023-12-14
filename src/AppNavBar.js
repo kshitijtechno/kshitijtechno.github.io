@@ -14,6 +14,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import profilePic from './images/1.png';
 import { Link, useNavigate } from 'react-router-dom';
 import config from './config';
+import Collapse from '@mui/material/Collapse';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
@@ -65,30 +66,46 @@ const AppNavBar = () => {
             >
               <MenuIcon />
             </IconButton>
-            <Drawer
-              anchor="left"
-              open={drawerOpen}
-              onClose={toggleDrawer(false)}
-            >
-              <List>
-                <ListItem button component={Link} to="/" onClick={toggleDrawer(false)}>
-                  <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
-                  <ListItemText primary={config.menuItem1} />
-                </ListItem>
-                <ListItem button component={Link} to="/dashboard" onClick={toggleDrawer(false)}>
-                  <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
-                  <ListItemText primary={config.menuItem2} />
-                </ListItem>
-                <ListItem button component={Link} to="/blog" onClick={toggleDrawer(false)}>
-                  <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
-                  <ListItemText primary={config.menuItem3} />
-                </ListItem>
-                <ListItem button component={Link} to="/videos" onClick={toggleDrawer(false)}>
-                  <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
-                  <ListItemText primary={config.menuItem4} />
-                </ListItem>
-              </List>
+            <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
+                <List>
+                  <ListItem button component={Link} to="/" onClick={toggleDrawer(false)}>
+                    <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
+                    <ListItemText primary={config.menuItem1} />
+                  </ListItem>
+                  <ListItem button onClick={handleMenuOpen('product', setProductMenuOpen)} style={{ paddingLeft: '20px' }}>
+                    <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
+                    <ListItemText primary={config.menuItem2} />
+                    <KeyboardArrowDownIcon />
+                  </ListItem>
+                      <Collapse in={Boolean(productMenuOpen)}>
+                        <List component="div" disablePadding>
+                          <ListItem button component={Link} to="/products" onClick={toggleDrawer(false)} style={{ paddingLeft: '40px' }}>
+                            <ListItemText primary="Products" />
+                          </ListItem>
+                        </List>
+                      </Collapse>
+                  <ListItem button onClick={handleMenuOpen('hybris', setHybrisMenuOpen)} style={{ paddingLeft: '20px' }}>
+                    <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
+                    <ListItemText primary={config.menuItem3} />
+                    <KeyboardArrowDownIcon />
+                  </ListItem>
+                        <Collapse in={Boolean(hybrisMenuOpen)}>
+                          <List component="div" disablePadding>
+                            <ListItem button component={Link} to="/blog/hybris" onClick={toggleDrawer(false)} style={{ paddingLeft: '40px' }}>
+                              <ListItemText primary="Hybris" />
+                            </ListItem>
+                            <ListItem button component={Link} to="/blog/java" onClick={toggleDrawer(false)} style={{ paddingLeft: '40px' }}>
+                              <ListItemText primary="Java" />
+                            </ListItem>
+                          </List>
+                        </Collapse>
+                  <ListItem button component={Link} to="/videos" onClick={toggleDrawer(false)}>
+                    <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
+                    <ListItemText primary={config.menuItem4} />
+                  </ListItem>
+                </List>
             </Drawer>
+
           </Box>
           <Box sx={{ flexGrow: 1 }}>            
             <img src={profilePic} alt="Kshitij Wardhan Ahirwar" height="50" onClick={handleAvatarClick}/>
