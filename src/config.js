@@ -2,7 +2,7 @@ const config = {
     siteName: "Kshitij Techno",
     menuItem1: "Home",
     menuItem2: "Products",
-    menuItem3: "Blog",
+    menuItem3: "Learnings",
     menuItem4: "Videos",
     contact: "Contact",
     disclaimer: "Disclaimer",
@@ -221,7 +221,13 @@ const config = {
         <a href="https://localhost:9002/kshitijtechnostorefront/?site=electronics&clear=true" target='_blank' rel='noopener noreferrer'>https://localhost:9002/kshitijtechnostorefront/?site=electronics&clear=true</a> <br/>
         <a href="https://localhost:9002/kshitijtechnostorefront/?site=apparel-uk&clear=true" target='_blank' rel='noopener noreferrer'>https://localhost:9002/kshitijtechnostorefront/?site=apparel-uk&clear=true</a> <br/>`,
         textContent25 :`<b>If you face any difficulities during following the guide please contact us. You can show your support by providing your valuable comments on Cantact Us page. Thankyou so much !!!</b>`,
-        textContent26 :`Hybris has created new folder inside custom folder called "kshitijtechno" and inside it has created 7 extension to support site functionality. We will modify the custom folder contents during the development.`
+        textContent26 :`Hybris has created new folder inside custom folder called "kshitijtechno" and inside it has created 7 extension to support site functionality. We will modify the custom folder contents during the development.`,
+        textContent27 :`<b>Steps 16.</b> You can access HAC (Hybris administration console) at url:<br/>
+        <a href="https://localhost:9002/hac" target='_blank' rel='noopener noreferrer'>https://localhost:9002/hac</a> <br/>
+        Use username "admin" and password "nimda" to login.`,
+        textContent28 :`<b>Steps 17.</b> You can access Backoffice at url:<br/>
+        <a href="https://localhost:9002/backoffice/login.zul" target='_blank' rel='noopener noreferrer'>https://localhost:9002/backoffice/login.zul</a> <br/>
+        Use username "admin" and password "nimda" to login.`,      
       },
     ],
 

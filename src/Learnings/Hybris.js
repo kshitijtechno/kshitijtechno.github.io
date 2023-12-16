@@ -1,7 +1,8 @@
 import { Container, Paper } from '@mui/material';
 import TrackPageAnalytics from '../TrackPageAnalytics';
-import HybrisLocalSetupGuide from './HybrisLocalSetupGuide';
 import HybrisInterview from './HybrisInterview';
+import { Link } from 'react-router-dom';
+
 
 const Hybris = () => {
   const scrollToSection = (id, event) => {
@@ -13,7 +14,7 @@ const Hybris = () => {
   };
     return (
         <div>
-          <TrackPageAnalytics pagename="Hybris"/>
+          <TrackPageAnalytics pagename="HybrisInterview"/>
             <Container maxWidth="lg" sx={{ marginTop: 4 }}>        
               <Paper elevation={2} sx={{ padding: 3, borderRadius: 4 }}>
               <nav>
@@ -24,9 +25,9 @@ const Hybris = () => {
                       </a>
                     </li>
                     <li>
-                      <a href="#hybris-local" onClick={(e) => scrollToSection('hybris-local', e)}>
-                        Hybris local setup guide
-                      </a>
+                    <Link to="/learnings/hybris/local-setup">
+                      Hybris local setup guide
+                    </Link>
                     </li>
                     <li>
                       <a href="#hybris-local" onClick={(e) => scrollToSection('hybris-local', e)}>
@@ -35,9 +36,7 @@ const Hybris = () => {
                     </li>
                   </ul>
                 </nav>
-                <HybrisInterview/>
-                <HybrisLocalSetupGuide/>
-                
+                <HybrisInterview/>                
               </Paper>
             </Container>
         </div>

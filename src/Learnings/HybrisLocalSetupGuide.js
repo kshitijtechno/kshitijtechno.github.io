@@ -1,5 +1,7 @@
 import * as React from 'react';
 import MediaCard from '../MediaCard';
+import { Container, Paper } from '@mui/material';
+import TrackPageAnalytics from '../TrackPageAnalytics';
 import config from '../config';
 import image1 from '../images/hybrisLocalSetupGuide/sapjdkimg1.png';
 import image2 from '../images/hybrisLocalSetupGuide/image2.png';
@@ -27,6 +29,10 @@ import image23 from '../images/hybrisLocalSetupGuide/image23.png';
 import image24 from '../images/hybrisLocalSetupGuide/image24.png';
 import image25 from '../images/hybrisLocalSetupGuide/image25.png';
 import image26 from '../images/hybrisLocalSetupGuide/image26.png';
+import image27 from '../images/hybrisLocalSetupGuide/image27.png';
+import image28 from '../images/hybrisLocalSetupGuide/image28.png';
+import image29 from '../images/hybrisLocalSetupGuide/image29.png';
+import image30 from '../images/hybrisLocalSetupGuide/image30.png';
 
 
 function HybrisLocalSetupGuide() {
@@ -35,9 +41,14 @@ function HybrisLocalSetupGuide() {
      textContent11, textContent12,textContent13, textContent14,
      textContent15, textContent16, textContent17, textContent18,
      textContent19, textContent20, textContent21, textContent22, 
-     textContent23, textContent24, textContent25, textContent26 } = config.hybrisLocalSetupGuide[0];
+     textContent23, textContent24, textContent25, textContent26,
+     textContent27, textContent28 } = config.hybrisLocalSetupGuide[0];
   return (
     <div id="hybris-local">
+      <TrackPageAnalytics pagename="HybrisLocalSetup"/>
+      <Container maxWidth="lg" sx={{ marginTop: 4 }}>        
+        <Paper elevation={2} sx={{ padding: 3, borderRadius: 4 }}>
+              
         <MediaCard
         content="How to setup SAP commerce cloud in local system for development"
         cardStyle={{ maxWidth: '100%', backgroundColor: '#1CB5E0', textAlign:'center' }}
@@ -88,23 +99,23 @@ function HybrisLocalSetupGuide() {
         <img src={image22} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
         <p dangerouslySetInnerHTML={{ __html: textContent26 }} />
         <img src={image26} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
-
         <p dangerouslySetInnerHTML={{ __html: textContent22 }} />
         <img src={image23} alt="Kshitij Wardhan Ahirwar" style={{ height: '100px', width: '1100px', border: '1px solid #00ff00' }}/><br/>
         <p dangerouslySetInnerHTML={{ __html: textContent23 }} />
         <img src={image24} alt="Kshitij Wardhan Ahirwar" style={{ height: '100px', width: '500px', border: '1px solid #00ff00' }}/><br/>
         <p dangerouslySetInnerHTML={{ __html: textContent24 }} />
         <img src={image25} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+        <p dangerouslySetInnerHTML={{ __html: textContent27 }} />
+        <img src={image27} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+        <p></p>
+        <img src={image28} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+        <p dangerouslySetInnerHTML={{ __html: textContent28 }} />
+        <img src={image29} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+        <p></p>
+        <img src={image30} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
         <p dangerouslySetInnerHTML={{ __html: textContent25 }} />
-
-
-
-
-
-
-
-
-
+        </Paper>
+        </Container>
     </div>
   );
 }
