@@ -14,21 +14,28 @@ import image10 from '../images/hybrisLocalSetupGuide/image10.png';
 import image11 from '../images/hybrisLocalSetupGuide/image11.png';
 import image12 from '../images/hybrisLocalSetupGuide/image12.png';
 import image13 from '../images/hybrisLocalSetupGuide/image13.png';
-
-
-
-
-
-
-
-
-//import CodeSnippet from '../CodeSnippet';
+import image14 from '../images/hybrisLocalSetupGuide/image14.png';
+import image15 from '../images/hybrisLocalSetupGuide/image15.png';
+import image16 from '../images/hybrisLocalSetupGuide/image16.png';
+import image17 from '../images/hybrisLocalSetupGuide/image17.png';
+import image18 from '../images/hybrisLocalSetupGuide/image18.png';
+import image19 from '../images/hybrisLocalSetupGuide/image19.png';
+import image20 from '../images/hybrisLocalSetupGuide/image20.png';
+import image21 from '../images/hybrisLocalSetupGuide/image21.png';
+import image22 from '../images/hybrisLocalSetupGuide/image22.png';
+import image23 from '../images/hybrisLocalSetupGuide/image23.png';
+import image24 from '../images/hybrisLocalSetupGuide/image24.png';
+import image25 from '../images/hybrisLocalSetupGuide/image25.png';
+import image26 from '../images/hybrisLocalSetupGuide/image26.png';
 
 
 function HybrisLocalSetupGuide() {
   const { textContent1, textContent2, textContent3, textContent4, textContent5,
      textContent6, textContent7, textContent8, textContent9, textContent10,
-     textContent11, textContent12 } = config.hybrisLocalSetupGuide[0];
+     textContent11, textContent12,textContent13, textContent14,
+     textContent15, textContent16, textContent17, textContent18,
+     textContent19, textContent20, textContent21, textContent22, 
+     textContent23, textContent24, textContent25, textContent26 } = config.hybrisLocalSetupGuide[0];
   return (
     <div id="hybris-local">
         <MediaCard
@@ -61,6 +68,38 @@ function HybrisLocalSetupGuide() {
         <img src={image12} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
         <p></p>
         <img src={image13} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+        <p dangerouslySetInnerHTML={{ __html: textContent13 }} />
+        <img src={image14} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+        <p dangerouslySetInnerHTML={{ __html: textContent14 }} />
+        <img src={image15} alt="Kshitij Wardhan Ahirwar" style={{ height: '100px', width: '1100px', border: '1px solid #00ff00' }}/><br/>
+        <p dangerouslySetInnerHTML={{ __html: textContent15 }} />
+        <img src={image16} alt="Kshitij Wardhan Ahirwar" style={{ height: '100px', width: '1100px', border: '1px solid #00ff00' }}/><br/>
+        <p dangerouslySetInnerHTML={{ __html: textContent16 }} />
+        <img src={image17} alt="Kshitij Wardhan Ahirwar" style={{ height: '100px', width: '1100px', border: '1px solid #00ff00' }}/><br/>
+        <p dangerouslySetInnerHTML={{ __html: textContent17 }} />
+        <img src={image18} alt="Kshitij Wardhan Ahirwar" style={{ height: '100px', width: '1100px', border: '1px solid #00ff00' }}/><br/>
+        <p dangerouslySetInnerHTML={{ __html: textContent18 }} />
+        <img src={image19} alt="Kshitij Wardhan Ahirwar" style={{ height: '100px', width: '1100px', border: '1px solid #00ff00' }}/><br/>
+        <p dangerouslySetInnerHTML={{ __html: textContent19 }} />
+        <img src={image20} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+        <p dangerouslySetInnerHTML={{ __html: textContent20 }} />
+        <img src={image21} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+        <p dangerouslySetInnerHTML={{ __html: textContent21 }} />
+        <img src={image22} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+        <p dangerouslySetInnerHTML={{ __html: textContent26 }} />
+        <img src={image26} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+
+        <p dangerouslySetInnerHTML={{ __html: textContent22 }} />
+        <img src={image23} alt="Kshitij Wardhan Ahirwar" style={{ height: '100px', width: '1100px', border: '1px solid #00ff00' }}/><br/>
+        <p dangerouslySetInnerHTML={{ __html: textContent23 }} />
+        <img src={image24} alt="Kshitij Wardhan Ahirwar" style={{ height: '100px', width: '500px', border: '1px solid #00ff00' }}/><br/>
+        <p dangerouslySetInnerHTML={{ __html: textContent24 }} />
+        <img src={image25} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+        <p dangerouslySetInnerHTML={{ __html: textContent25 }} />
+
+
+
+
 
 
 
