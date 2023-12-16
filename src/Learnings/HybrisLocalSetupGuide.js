@@ -1,8 +1,9 @@
 import * as React from 'react';
-import MediaCard from '../MediaCard';
-import { Container, Paper } from '@mui/material';
+import { Container, Paper, Grid } from '@mui/material';
 import TrackPageAnalytics from '../TrackPageAnalytics';
-import config from '../config';
+import MediaCard from '../MediaCard';
+import LeftMenu from '../LeftMenu';
+import config from './hybris_message';
 import image1 from '../images/hybrisLocalSetupGuide/sapjdkimg1.png';
 import image2 from '../images/hybrisLocalSetupGuide/image2.png';
 import image3 from '../images/hybrisLocalSetupGuide/image3.png';
@@ -46,74 +47,83 @@ function HybrisLocalSetupGuide() {
   return (
     <div id="hybris-local">
       <TrackPageAnalytics pagename="HybrisLocalSetup"/>
-      <Container maxWidth="lg" sx={{ marginTop: 4 }}>        
+      <Container maxWidth="xl" sx={{ marginTop: 4 }}>          
         <Paper elevation={2} sx={{ padding: 3, borderRadius: 4 }}>
-              
-        <MediaCard
+        <Grid container spacing={2}>
+          <Grid item xs={3}>
+            <LeftMenu />
+          </Grid>          
+          <Grid item xs={8}>
+          <MediaCard
         content="How to setup SAP commerce cloud in local system for development"
         cardStyle={{ maxWidth: '100%', backgroundColor: '#1CB5E0', textAlign:'center' }}
         />
         <h4>{textContent1}</h4>
         {textContent2}
         <p dangerouslySetInnerHTML={{ __html: textContent3 }} />
-        <img src={image1} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
-        <img src={image4} alt="Kshitij Wardhan Ahirwar" style={{ height: '100px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image1} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
+        <img src={image4} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         <p dangerouslySetInnerHTML={{ __html: textContent4 }} />
-        <img src={image5} alt="Kshitij Wardhan Ahirwar" style={{ height: '100px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image5} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         <p dangerouslySetInnerHTML={{ __html: textContent5 }} />
-        <img src={image2} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
-        <img src={image3} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image2} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
+        <img src={image3} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         <p dangerouslySetInnerHTML={{ __html: textContent6 }} />
-        <img src={image6} alt="Kshitij Wardhan Ahirwar" style={{ height: '100px', width: '1100px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image6} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         {textContent7}
-        <img src={image7} alt="Kshitij Wardhan Ahirwar" style={{ height: '100px', width: '500px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image7} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         <p dangerouslySetInnerHTML={{ __html: textContent8 }} />
-        <img src={image8} alt="Kshitij Wardhan Ahirwar" style={{ height: '100px', width: '1100px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image8} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         {textContent9}
-        <img src={image9} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image9} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         <p dangerouslySetInnerHTML={{ __html: textContent10 }} />
-        <img src={image10} alt="Kshitij Wardhan Ahirwar" style={{ height: '100px', width: '1100px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image10} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         <p dangerouslySetInnerHTML={{ __html: textContent11 }} />
-        <img src={image11} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image11} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         <p dangerouslySetInnerHTML={{ __html: textContent12 }} />
-        <img src={image12} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image12} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         <p></p>
-        <img src={image13} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image13} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         <p dangerouslySetInnerHTML={{ __html: textContent13 }} />
-        <img src={image14} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image14} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         <p dangerouslySetInnerHTML={{ __html: textContent14 }} />
-        <img src={image15} alt="Kshitij Wardhan Ahirwar" style={{ height: '100px', width: '1100px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image15} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         <p dangerouslySetInnerHTML={{ __html: textContent15 }} />
-        <img src={image16} alt="Kshitij Wardhan Ahirwar" style={{ height: '100px', width: '1100px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image16} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         <p dangerouslySetInnerHTML={{ __html: textContent16 }} />
-        <img src={image17} alt="Kshitij Wardhan Ahirwar" style={{ height: '100px', width: '1100px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image17} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         <p dangerouslySetInnerHTML={{ __html: textContent17 }} />
-        <img src={image18} alt="Kshitij Wardhan Ahirwar" style={{ height: '100px', width: '1100px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image18} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         <p dangerouslySetInnerHTML={{ __html: textContent18 }} />
-        <img src={image19} alt="Kshitij Wardhan Ahirwar" style={{ height: '100px', width: '1100px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image19} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         <p dangerouslySetInnerHTML={{ __html: textContent19 }} />
-        <img src={image20} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image20} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         <p dangerouslySetInnerHTML={{ __html: textContent20 }} />
-        <img src={image21} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image21} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         <p dangerouslySetInnerHTML={{ __html: textContent21 }} />
-        <img src={image22} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image22} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         <p dangerouslySetInnerHTML={{ __html: textContent26 }} />
-        <img src={image26} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image26} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         <p dangerouslySetInnerHTML={{ __html: textContent22 }} />
-        <img src={image23} alt="Kshitij Wardhan Ahirwar" style={{ height: '100px', width: '1100px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image23} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         <p dangerouslySetInnerHTML={{ __html: textContent23 }} />
-        <img src={image24} alt="Kshitij Wardhan Ahirwar" style={{ height: '100px', width: '500px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image24} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         <p dangerouslySetInnerHTML={{ __html: textContent24 }} />
-        <img src={image25} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image25} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         <p dangerouslySetInnerHTML={{ __html: textContent27 }} />
-        <img src={image27} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image27} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         <p></p>
-        <img src={image28} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image28} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         <p dangerouslySetInnerHTML={{ __html: textContent28 }} />
-        <img src={image29} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image29} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         <p></p>
-        <img src={image30} alt="Kshitij Wardhan Ahirwar" style={{ height: '300px', width: '700px', border: '1px solid #00ff00' }}/><br/>
+        <img src={image30} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%', border: '1px solid #00ff00' }}/><br/>
         <p dangerouslySetInnerHTML={{ __html: textContent25 }} />
+          </Grid>
+        </Grid>
+    
+              
+        
         </Paper>
         </Container>
     </div>

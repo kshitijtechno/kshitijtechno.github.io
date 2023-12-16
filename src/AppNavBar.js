@@ -91,10 +91,10 @@ const AppNavBar = () => {
                   </ListItem>
                         <Collapse in={Boolean(hybrisMenuOpen)}>
                           <List component="div" disablePadding>
-                            <ListItem button component={Link} to="/learnings/hybris" onClick={toggleDrawer(false)} style={{ paddingLeft: '40px' }}>
+                            <ListItem button component={Link} to={config.uri_hybrisInterview} onClick={toggleDrawer(false)} style={{ paddingLeft: '40px' }}>
                               <ListItemText primary="Hybris" />
                             </ListItem>
-                            <ListItem button component={Link} to="/learnings/java" onClick={toggleDrawer(false)} style={{ paddingLeft: '40px' }}>
+                            <ListItem button component={Link} to={config.uri_javaInterview} onClick={toggleDrawer(false)} style={{ paddingLeft: '40px' }}>
                               <ListItemText primary="Java" />
                             </ListItem>
                           </List>
@@ -164,12 +164,12 @@ const AppNavBar = () => {
               }}
             >
               <MenuItem onClick={() => handleMenuClose(setHybrisMenuOpen)}>
-                <Button color="inherit" component={Link} to="/learnings/hybris">    
+                <Button color="inherit" component={Link} to={config.uri_hybrisInterview}>    
                   Hybris
                 </Button>
               </MenuItem>
               <MenuItem onClick={() => handleMenuClose(setHybrisMenuOpen)}>
-                <Button color="inherit" component={Link} to="/learnings/java">    
+                <Button color="inherit" component={Link} to={config.uri_javaInterview}>    
                   Java
                 </Button>
               </MenuItem>
