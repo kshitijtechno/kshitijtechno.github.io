@@ -22,7 +22,7 @@ const LeftMenu = () => {
 
   return (
     <div>
-    <Hidden mdUp>
+    <Hidden smUp>
       <IconButton onClick={handleDrawerOpen} edge="start" color="inherit" aria-label="menu">
           <MenuIcon />
         </IconButton>
@@ -70,7 +70,7 @@ const LeftMenu = () => {
 
       <div>
       {/* Visible on smaller screens (mobile) */}
-      <Hidden mdUp>
+      <Hidden smUp>
 
         <Drawer
           variant="temporary"
