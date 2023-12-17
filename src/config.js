@@ -19,6 +19,8 @@ const config = {
     
     uri_hybrisInterview : '/learnings/hybris/hybris-interview',
     uri_hybrisLocalSetup : '/learnings/hybris/local-setup',
+    uri_hybrisProjectImportIntellij : '/learnings/hybris/import-project-intellij',
+
     
     uri_javaInterview : '/learnings/java/java-interview',
 

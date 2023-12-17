@@ -54,7 +54,7 @@ const config = {
         textContent24 :`Server started successfully!!! You can access new storefront at urls :<br/>
         <a href="https://localhost:9002/kshitijtechnostorefront/?site=electronics&clear=true" target='_blank' rel='noopener noreferrer'>https://localhost:9002/kshitijtechnostorefront/?site=electronics&clear=true</a> <br/>
         <a href="https://localhost:9002/kshitijtechnostorefront/?site=apparel-uk&clear=true" target='_blank' rel='noopener noreferrer'>https://localhost:9002/kshitijtechnostorefront/?site=apparel-uk&clear=true</a> <br/>`,
-        textContent25 :`<b>If you face any difficulities during following the guide please contact us. You can show your support by providing your valuable comments on Cantact Us page. Thankyou so much !!!</b>`,
+        textContent25 :`<b>If you face any difficulities during following the guide please drop an email to codingcrust@gmail.com. I will be happy to assist you. Thankyou so much !!!</b>`,
         textContent26 :`Hybris has created new folder inside custom folder called "kshitijtechno" and inside it has created 7 extension to support site functionality. We will modify the custom folder contents during the development.`,
         textContent27 :`<b>Steps 16.</b> You can access HAC (Hybris administration console) at url:<br/>
         <a href="https://localhost:9002/hac" target='_blank' rel='noopener noreferrer'>https://localhost:9002/hac</a> <br/>
@@ -185,6 +185,34 @@ const config = {
         <p>Object, Number, Integer, Boolean, String, Map are the example of atomic type.`,
       },
     ],  
+    hybrisProjectImportIntellij : [
+      {
+        textContent1 : "These instructions are for IntelliJ IDEA 2021.3.2 (Community Edition).",
+        textContent2 : `Once you are done with the local setup of SAP Commerce Cloud you 
+        should import the project into intellij for development purpose. If you don't know how to do local setup
+        you can follow below guide and come back to this post later.`,
+        textContent3 :`<b>Steps 1.</b> Download and install intellij from official site <a href="https://www.jetbrains.com/idea/download/?section=mac">Jetbrains</a>. Download the community version only. Ultimate gives 30 days trial post trial you need to pay.<br/>
+        On successful installation you will see below screen when you open it first time. Click on plugins.`,
+        textContent4 :`<b>Steps 2.</b> Search "sap commerce", from results install 
+        "SAP Commerce Developer Toolset". Post plugin installation IDE will ask you to restart. Click on restart IDE.<br/>
+        After restart you will see above interface again. `,
+        textContent5 : `<b>Steps 3.</b> Click on Projects -> New Project -> select Empty Project ->
+        give any project name -> give any project location (here intellij will create workspace. It's not related to hybris) -> click on Finish. After finish it will open new intellij window.`,
+        textContent6 : `<b>Steps 4.</b> Click on File -> New -> Project From Existing Sources`,
+        textContent7 : `<b>Steps 5.</b> Navigate to your hybris project bin folder and select bin folder click on open button.`,
+        textContent8 : `<b>Steps 6.</b> Select import project from external model radio button, select hybris and then click next button.`,
+        textContent9 : `<b>Steps 7.</b> Click Next, Next 2 times until you get below screen. Select checkbox highlight with red color rectangle. With this you will be able to see the OOTB source code.`,
+        textContent10 : `<b>Steps 8.</b> Select all or leave as is, click next.`,
+        textContent11 :`<b>Steps 9.</b> As hybris 2211 need Java 17 mininum. So select Java 17 and click on Finish. If its not present in the list, you can click on "+" icon. Your system should 
+        have OpenJdk 17.`,
+        textContent12 : `<b>Steps 10.</b> Click New window`,
+        textContent13 : `<b>Steps 11.</b> Now wait it will load the project structure. Intellij takes sometime to load all the files. You should wait until intellij index over. Please see red highlight area in below image.`,
+        textContent14 :`<b>Steps 12.</b> If you are getting low memory error or intellij is hanged due to low memory. Please increase the heap memory for intellij to work smoothly.`,
+        textContent15 :`<b>Steps 13.</b> To increase the heap memory click on lens icon -> search memory -> select Change Memory Settings`,
+        textContent16 : `<b>Steps 14.</b> Increase the memory as per your system. I have increased it to 4056 from 1024 MB. Click on Save and restart.`,
+        textContent17 : `<b>Steps 15.</b> Project import is completed. In intellij you must see below folder/file structure.`,
+      },
+    ],
   };
   
 export default config;

@@ -3,8 +3,6 @@ import MediaCard from '../MediaCard';
 import { Container, Paper, Grid } from '@mui/material';
 import LeftMenu from '../LeftMenu';
 import TrackPageAnalytics from '../TrackPageAnalytics';
-//import config from '../config';
-//import CodeSnippet from '../CodeSnippet';
 
 
 
@@ -26,9 +24,6 @@ function JavaInterview() {
                 Work is in progress. Thanks for visiting.
                 </Grid>
         </Grid>
-    
-              
-        
         </Paper>
         </Container>
     </div>
