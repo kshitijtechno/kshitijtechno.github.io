@@ -95,7 +95,7 @@ const LeftMenu = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to={config.uri_hybrisLocalSetup} onClick={handleLinkClick}>
+                    <Link to={config.uri_hybrisProjectImportIntellij} onClick={handleLinkClick}>
                       Import hybris project in IntelliJ
                     </Link>
                   </li>
