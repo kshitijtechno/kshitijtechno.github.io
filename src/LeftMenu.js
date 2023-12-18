@@ -34,20 +34,28 @@ const LeftMenu = () => {
             <div>
               <nav>
                 <ul>
-                  <h3>Hybris</h3>
+                  <h3>1. Hybris</h3>
                   <li>
                     <Link to={config.uri_hybrisInterview} onClick={handleLinkClick}>
-                      Hybris interview
+                     1.1 Hybris interview
                     </Link>
                   </li>
+                  <br/>
+                  <li>
+                    <Link to={config.uri_itemsXml} onClick={handleLinkClick}>
+                    1.2 Data modeling in SAP Commerce Cloud 
+                    </Link>
+                  </li>
+                  <br/>
                   <li>
                     <Link to={config.uri_hybrisLocalSetup} onClick={handleLinkClick}>
-                      Hybris local setup guide
+                    1.3 Hybris local setup guide
                     </Link>
                   </li>
+                  <br/>
                   <li>
                     <Link to={config.uri_hybrisProjectImportIntellij} onClick={handleLinkClick}>
-                      Import hybris project in IntelliJ
+                     1.4 Import hybris project in IntelliJ
                     </Link>
                   </li>
                 </ul>
@@ -55,10 +63,10 @@ const LeftMenu = () => {
               <hr />
               <nav>
                 <ul>
-                  <h3>Java</h3>
+                  <h3>2. Java</h3>
                   <li>
                     <Link to={config.uri_javaInterview} onClick={handleLinkClick}>
-                      Java interview
+                     2.1 Java interview
                     </Link>
                   </li>
                 </ul>
@@ -83,20 +91,25 @@ const LeftMenu = () => {
             <div>
               <nav>
                 <ul>
-                  <h3>Hybris</h3>
+                  <h3>1. Hybris</h3>
                   <li>
                     <Link to={config.uri_hybrisInterview} onClick={handleLinkClick}>
-                      Hybris interview
+                      1.1 Hybris interview
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={config.uri_itemsXml} onClick={handleLinkClick}>
+                    1.2 Data modeling in SAP Commerce Cloud
                     </Link>
                   </li>
                   <li>
                     <Link to={config.uri_hybrisLocalSetup} onClick={handleLinkClick}>
-                      Hybris local setup guide
+                      1.3 Hybris local setup guide
                     </Link>
                   </li>
                   <li>
                     <Link to={config.uri_hybrisProjectImportIntellij} onClick={handleLinkClick}>
-                      Import hybris project in IntelliJ
+                      1.4 Import hybris project in IntelliJ
                     </Link>
                   </li>
                 </ul>
@@ -104,10 +117,10 @@ const LeftMenu = () => {
               <hr />
               <nav>
                 <ul>
-                  <h3>Java</h3>
+                  <h3>2. Java</h3>
                   <li>
                     <Link to={config.uri_javaInterview} onClick={handleLinkClick}>
-                      Java interview
+                      2.1 Java interview
                     </Link>
                   </li>
                 </ul>

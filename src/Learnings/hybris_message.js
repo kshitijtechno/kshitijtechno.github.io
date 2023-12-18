@@ -120,7 +120,7 @@ const config = {
             <atomictype class="java.lang.Object" autocreate="true" generate="false"/>
             <atomictype class="java.lang.Integer" extends="java.lang.Number" autocreate="true" generate="false"/>
             <atomictype class="java.lang.String" extends="java.lang.Object" autocreate="true" generate="false"/>
-          </atomictype>
+          </atomictypes>
           <collectiontypes>
             <collectiontype code="ExampleCollection" elementtype="Item" autocreate="true" generate="false" type="list"/>
             <collectiontype code="DeliveryModeCollection" elementtype="DeliveryMode" autocreate="true" generate="false" type="set"/>
@@ -211,6 +211,51 @@ const config = {
         textContent15 :`<b>Steps 13.</b> To increase the heap memory click on lens icon -> search memory -> select Change Memory Settings`,
         textContent16 : `<b>Steps 14.</b> Increase the memory as per your system. I have increased it to 4056 from 1024 MB. Click on Save and restart.`,
         textContent17 : `<b>Steps 15.</b> Project import is completed. In intellij you must see below folder/file structure.`,
+      },
+    ],
+    hybrisDataModeling : [
+      {
+        textContent1 :`<b>In SAP Commerce Cloud, Data modeling is a way to create model classes, Collections and Relations. Data modeling
+        is related to the persistance layer.</b>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Let's take an example of basic Java project 
+        where we need to store the Student details like id, name, address inside db. 
+        If we are using Hibernate, we have to create the pojo class for Student. 
+        We have to write id, name, address as member variable of class along with the setters/getters</p>
+        <p>But in Hybris we don't need to manually write the classes instead we have to give the details inside items.xml file and build the platform.
+        Hybris will automtically generate the Student Model for you.
+        So the process of defining the details inside items.xml is called Data modeling.</p>
+        Data modeling is a crucial part for Hybris application. Mastering the data modeling is very much needed to work on Hybris.
+        Also this is the hot topic for interviewers. Let's deep dive into Data modeling concept's.<br/>
+        Below is items.xml for kshitijtechno hybris project.<br/>
+        <b>kshitijtechnocore-items.xml</b> is where we have to define our Student itemtype. In Hybris we will call Customer model as Customer itemtype.<br/>
+        items.xml resides inside the coreextension/resources folder of the project. For kshitijtechno, kshitijtechnocore is the core extension.`,
+        textContent2 :`We have another core-items.xml inside platform. This is provided by Hybris OOTB to support the electronics and apparel store functionalities.
+        During development you should not modify this core-items.xml instead modify which exists inside custom folder. 
+        But you can checkout the file for reference purpose and see how SAP has defined items and what are the various available attribute which we can apply to an item.`, 
+        textContent3 : `For items.xml schema is defined inside items.xsd.<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The tags used inside items.xml to represent the data are : 
+        items, atomictypes, collectiontypes, enumtypes, maptypes, relations, itemtypes.
+        The sequence of the tags is fixed. For e.g. collectiontypes can't be defined after relations.
+        collectiontypes should be defined after atomictypes and before enumtypes only. To easily remember the sequence you can remember word <b>"ACE MRI"</b>. Here each alphabet represent a tag.
+        Also inside each main tag there is immidiate child tag. Keep remember main tag is always in plural and child tag is singular. e.g. collectiontypes is main tag, collectiontype is child tag inside collectiontypes.<br/>
+        <b>items.xml is case sensitive.</b><br/>
+        <b>items is the root tag for items.xml.</b><br/>
+        <b>A</b> - atomictypes : atomictypes are used to represent the simple Java object. The name ('atomic') means 'non-composed' objects. e.g.
+        Object, Number, Integer, Boolean, String, Map. All primitive types, wrapper class are kind of atomictype in hybris. In realtime project will rarely define any atomic types. 
+        Whatever we need those are already defined by Hybris.
+        Below is the code snippet.<br/>`,
+        code1 : `<atomictypes>
+    <atomictype class="java.lang.Object" autocreate="true" generate="false"/>
+    <atomictype class="java.lang.Number" extends="java.lang.Object" autocreate="true" generate="false"/>
+    <atomictype class="java.lang.Integer" extends="java.lang.Number" autocreate="true" generate="false"/>
+</atomictypes>`,
+        textContent4 : `atomictypes : its parent tag.<br/>
+        atomictype : its child tag.<br/>
+        class : it's a mandatory attibute. A Java class should be assigned to this attirbute.<br/>
+        autocreate : If it's true atomictype will be created during initialization. It's optional and default value is true.<br/>
+        generate : it's deprecated now. Has no effect on the atomictype`,
+        textContent5 : '<b>What if we redefined the atomictype again in my custom folders kshitijtechnocore-items.xml?' , 
+        textContent6 : 'Build will fail. Build will through an java.lang.IllegalArgumentException due to duplicate type code'
       },
     ],
   };
