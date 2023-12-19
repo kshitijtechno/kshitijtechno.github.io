@@ -255,26 +255,37 @@ const config = {
         autocreate : If it's true atomictype will be created during initialization. It's optional and default value is true.<br/>
         generate : it's deprecated now. Has no effect on the atomictype`,
         textContent5 : '<b>What if we redefined the atomictype again in my custom folders kshitijtechnocore-items.xml?' , 
-        textContent6 : 'Build will fail. Build will through an java.lang.IllegalArgumentException due to duplicate type code'
+        textContent6 : `Build will fail. Build will through an java.lang.IllegalArgumentException due to duplicate type code.<p></p>
+        <b>C</b> - collectiontypes : its used to define the collection object.`,
       },
     ],
     hybrisQuiz1 : [
       {
-        question: "What is SAP Hybris?",
-        answer: "SAP Hybris or later renamed as SAP Commerce cloud is an e-commerce, digital marketing solution. It's owned by SAP.",
+        question : "What is hybris?",
+        answers : [`Hybris is a programming language`, 
+        "Hybris is an ERP tool", "Hybris is JavaScript based library", "Hybris is an e-commrce solution"],
+        correctAnswer : "Hybris is an e-commrce solution",
       },
       {
-        question: "What is current version of SAP Commerce cloud?",
-        answer: "Current version is 2211.",
+        question : "Who owns Hybris?",
+        answers : ["TCS", "SAP", "Tech Mahindra", "Hybris"],
+        correctAnswer : "SAP",
       },
       {
-        question: "Is SAP Commerce cloud is free to use?",
-        answer: "No its not free. We should have license to use it.",
+        question : "Select which is True.",
+        answers : ["Hybris is renamed as SAP Commerce Cloud", "Hybris owned by TCS", "Hybris is a ERP"],
+        correctAnswer : "Hybris is renamed as SAP Commerce Cloud",
       },
       {
-        question: "What is e-commerce solution?",
-        answer: "E-commerce is a platform where end user can place the orders. Customer could be a retail customer, business customer etc.",
-      }
+        question : "SAP Commerce Cloud was invented in which year?",
+        answers : ["1997", "1992", "1967", "2002"],
+        correctAnswer : "1997",
+      },
+      {
+        question : "What is the full form of HAC?",
+        answers : ["Hybris Administration Console", "There is no full form"],
+        correctAnswer : "Hybris Administration Console",
+      },     
     ],
   };
   
