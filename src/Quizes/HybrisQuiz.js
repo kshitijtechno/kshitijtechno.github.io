@@ -1,6 +1,6 @@
 import { Container, Paper, Grid } from '@mui/material';
 import { useState } from 'react';
-//import TrackPageAnalytics from '../TrackPageAnalytics';
+import TrackPageAnalytics from '../TrackPageAnalytics';
 import LeftMenuQuizes from '../Quizes/LeftMenuQuizes';
 import MediaCard from '../MediaCard';
 import config from '../Learnings/hybris_message';
@@ -32,7 +32,7 @@ const HybrisQuiz = () => {
 
     return (
         <div id="hybris-quiz">
-        {/* <TrackPageAnalytics pagename="HybrisQuiz"/> */}
+        <TrackPageAnalytics pagename="HybrisQuiz"/>
         <Container maxWidth="xl" sx={{ marginTop: 4 }}>          
             <Paper elevation={2} sx={{ padding: 3, borderRadius: 4 }}>
             <Grid container spacing={2}>
