@@ -258,6 +258,24 @@ const config = {
         textContent6 : 'Build will fail. Build will through an java.lang.IllegalArgumentException due to duplicate type code'
       },
     ],
+    hybrisQuiz1 : [
+      {
+        question: "What is SAP Hybris?",
+        answer: "SAP Hybris or later renamed as SAP Commerce cloud is an e-commerce, digital marketing solution. It's owned by SAP.",
+      },
+      {
+        question: "What is current version of SAP Commerce cloud?",
+        answer: "Current version is 2211.",
+      },
+      {
+        question: "Is SAP Commerce cloud is free to use?",
+        answer: "No its not free. We should have license to use it.",
+      },
+      {
+        question: "What is e-commerce solution?",
+        answer: "E-commerce is a platform where end user can place the orders. Customer could be a retail customer, business customer etc.",
+      }
+    ],
   };
   
 export default config;

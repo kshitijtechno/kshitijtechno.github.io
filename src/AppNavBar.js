@@ -25,8 +25,8 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 const AppNavBar = () => {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
   const [productMenuOpen, setProductMenuOpen] = React.useState(null);
-  //const [servicesMenuOpen, setServicesMenuOpen] = React.useState(null);
   const [hybrisMenuOpen, setHybrisMenuOpen] = React.useState(null);
+  const [quizMenuOpen, setQuizMenuOpen] = React.useState(null);
 
   const toggleDrawer = (open) => (event) => {
     if (
@@ -99,6 +99,18 @@ const AppNavBar = () => {
                             </ListItem>
                           </List>
                         </Collapse>
+                  <ListItem button onClick={handleMenuOpen('hybris', setQuizMenuOpen)} style={{ paddingLeft: '20px' }}>
+                    <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
+                    <ListItemText primary={config.menuItem5} />
+                    <KeyboardArrowDownIcon />
+                  </ListItem>
+                        <Collapse in={Boolean(quizMenuOpen)}>
+                          <List component="div" disablePadding>
+                            <ListItem button component={Link} to={config.uri_hybrisquiz} onClick={toggleDrawer(false)} style={{ paddingLeft: '40px' }}>
+                              <ListItemText primary="Hybris" />
+                            </ListItem>
+                          </List>
+                  </Collapse>      
                   <ListItem button component={Link} to="/videos" onClick={toggleDrawer(false)}>
                     <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
                     <ListItemText primary={config.menuItem4} />
@@ -174,6 +186,36 @@ const AppNavBar = () => {
                 </Button>
               </MenuItem>
             </Menu>
+            {/* Quiz menu start   */}
+            <Button
+              color="inherit"
+              onClick={handleMenuOpen('hybris', setQuizMenuOpen)}
+              id="quiz-menu"
+              aria-controls={quizMenuOpen ? 'hybris-basic-menu' : undefined}
+              aria-haspopup="true"
+              aria-expanded={quizMenuOpen ? 'true' : undefined}
+              endIcon={<KeyboardArrowDownIcon />}
+            >
+              <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
+              {config.menuItem5}
+            </Button>
+            <Menu
+              id="hybris-basic-menu"
+              anchorEl={quizMenuOpen}
+              open={Boolean(quizMenuOpen)}
+              onClose={() => handleMenuClose(setQuizMenuOpen)}
+              MenuListProps={{
+                'aria-labelledby': 'hybris-menu',
+              }}
+            >
+              <MenuItem onClick={() => handleMenuClose(setQuizMenuOpen)}>
+                <Button color="inherit" component={Link} to={config.uri_hybrisquiz}>    
+                  Hybris
+                </Button>
+              </MenuItem>
+            </Menu>
+            {/* Quiz menu end */}
+
             <Button color="inherit" component={Link} to="/videos">
               <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
               {config.menuItem4}

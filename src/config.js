@@ -4,6 +4,7 @@ const config = {
     menuItem2: "Products",
     menuItem3: "Learnings",
     menuItem4: "Videos",
+    menuItem5: "Quizes",
     contact: "Contact",
     disclaimer: "Disclaimer",
     createby: "Created by : Kshitij Wardhan Ahirwar",
@@ -23,6 +24,7 @@ const config = {
     uri_itemsXml : '/learnings/hybris/hybris-data-modeling',
     
     uri_javaInterview : '/learnings/java/java-interview',
+    uri_hybrisquiz:'/quizes/hybris-quiz',
 
     youtube_modeldata_message: "To to show your support please visit <a href='https://www.youtube.com/@kshitijwardhan' target='_blank' rel='noopener noreferrer'> Kshitij Wardhan Ahirwar </a> my youtube channel. Please do watch, like, comment, share & subscribe to my channel",
     youtubeVideosTechnology: [

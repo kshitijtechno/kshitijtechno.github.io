@@ -14,6 +14,9 @@ import JavaInterview from './Learnings/JavaInterview';
 import config from './config';
 import HybrisProjectImportIntellij from './Learnings/HybrisProjectImportIntellij';
 import HybrisDataModeling from './Learnings/HybrisDataModeling';
+import HybrisQuiz from './Quizes/HybrisQuiz';
+
+
 
 ReactGA.initialize('G-P3PN6X95YY');
 
@@ -29,6 +32,7 @@ function App() {
             <Route path={config.uri_hybrisLocalSetup} element={<div className="content"><HybrisLocalSetupGuide /></div>} />
             <Route path={config.uri_hybrisProjectImportIntellij} element={<div className="content"><HybrisProjectImportIntellij /></div>} />
             <Route path={config.uri_javaInterview} element={<div className="content"><JavaInterview /></div>} />
+            <Route path={config.uri_hybrisquiz} element={<div className="content"><HybrisQuiz /></div>} />
             <Route path="/contactus" element={<div className="content"><ContactUs /></div>} />
             <Route path="/videos" element={<div className="content"><Videos /></div>} />
             <Route path="/disclaimer" element={<div className="content"><Disclaimer /></div>} />
