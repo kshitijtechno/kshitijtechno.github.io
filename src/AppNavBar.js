@@ -16,6 +16,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import config from './config';
 import Collapse from '@mui/material/Collapse';
 
+import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
+import AutoStoriesRoundedIcon from '@mui/icons-material/AutoStoriesRounded';
+import EmojiEventsRoundedIcon from '@mui/icons-material/EmojiEventsRounded';
+import OndemandVideoRoundedIcon from '@mui/icons-material/OndemandVideoRounded';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Menu from '@mui/material/Menu';
@@ -69,7 +74,7 @@ const AppNavBar = () => {
             <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
                 <List>
                   <ListItem button component={Link} to="/" onClick={toggleDrawer(false)}>
-                    <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
+                  <HomeRoundedIcon sx={{ color: "#ece509" }}/>&nbsp;
                     <ListItemText primary={config.menuItem1} />
                   </ListItem>
                   <ListItem button onClick={handleMenuOpen('product', setProductMenuOpen)} style={{ paddingLeft: '20px' }}>
@@ -85,7 +90,7 @@ const AppNavBar = () => {
                         </List>
                       </Collapse>
                   <ListItem button onClick={handleMenuOpen('hybris', setHybrisMenuOpen)} style={{ paddingLeft: '20px' }}>
-                    <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
+                  <AutoStoriesRoundedIcon sx={{ color: "#ece509" }}/>&nbsp;
                     <ListItemText primary={config.menuItem3} />
                     <KeyboardArrowDownIcon />
                   </ListItem>
@@ -100,7 +105,7 @@ const AppNavBar = () => {
                           </List>
                         </Collapse>
                   <ListItem button onClick={handleMenuOpen('hybris', setQuizMenuOpen)} style={{ paddingLeft: '20px' }}>
-                    <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
+                  <EmojiEventsRoundedIcon sx={{ color: "#ece509" }}/>&nbsp;
                     <ListItemText primary={config.menuItem5} />
                     <KeyboardArrowDownIcon />
                   </ListItem>
@@ -112,8 +117,8 @@ const AppNavBar = () => {
                           </List>
                   </Collapse>      
                   <ListItem button component={Link} to="/videos" onClick={toggleDrawer(false)}>
-                    <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
-                    <ListItemText primary={config.menuItem4} />
+                  <OndemandVideoRoundedIcon sx={{ color: "#ece509" }}/>&nbsp;
+                  <ListItemText primary={config.menuItem4} />
                   </ListItem>
                 </List>
             </Drawer>
@@ -124,7 +129,7 @@ const AppNavBar = () => {
           </Box>
           <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
             <Button color="inherit" component={Link} to="/">
-              <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
+            <HomeRoundedIcon sx={{ color: "#ece509" }}/>&nbsp;  
               {config.menuItem1}
             </Button>
             <Button
@@ -163,7 +168,7 @@ const AppNavBar = () => {
               aria-expanded={hybrisMenuOpen ? 'true' : undefined}
               endIcon={<KeyboardArrowDownIcon />}
             >
-              <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
+              <AutoStoriesRoundedIcon sx={{ color: "#ece509" }}/>&nbsp;
               {config.menuItem3}
             </Button>
             <Menu
@@ -196,7 +201,7 @@ const AppNavBar = () => {
               aria-expanded={quizMenuOpen ? 'true' : undefined}
               endIcon={<KeyboardArrowDownIcon />}
             >
-              <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
+              <EmojiEventsRoundedIcon sx={{ color: "#ece509" }}/>&nbsp;
               {config.menuItem5}
             </Button>
             <Menu
@@ -217,7 +222,7 @@ const AppNavBar = () => {
             {/* Quiz menu end */}
 
             <Button color="inherit" component={Link} to="/videos">
-              <FontAwesomeIcon icon={faStar} size="sm" style={{ color: "#ece509" }} />&nbsp;
+              <OndemandVideoRoundedIcon sx={{ color: "#ece509" }}/>&nbsp;
               {config.menuItem4}
             </Button>
           </Box>

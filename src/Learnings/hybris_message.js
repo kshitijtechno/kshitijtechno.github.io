@@ -265,11 +265,13 @@ const config = {
         answers : [`Hybris is a programming language`, 
         "Hybris is an ERP tool", "Hybris is JavaScript based library", "Hybris is an e-commrce solution"],
         correctAnswer : "Hybris is an e-commrce solution",
+        explaination :`SAP Hybris or later renamed as SAP Commerce cloud is an e-commerce, digital marketing solution. It's owned by SAP.`,
       },
       {
         question : "Who owns Hybris?",
         answers : ["TCS", "SAP", "Tech Mahindra", "Hybris"],
         correctAnswer : "SAP",
+        explaination :``,
       },
       {
         question : "Select which is True.",
