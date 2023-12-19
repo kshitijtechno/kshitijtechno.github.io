@@ -3,9 +3,12 @@
   <url>
     <loc>https://kshitijtechno.github.io/</loc>
     <loc>https://kshitijtechno.github.io/#</loc>
-    <loc>https://kshitijtechno.github.io/videos</loc>
     <loc>https://kshitijtechno.github.io/#/videos</loc>
-    <loc>https://kshitijtechno.github.io/blogs</loc>
-    <loc>https://kshitijtechno.github.io/#/blogs</loc>
+    <loc>https://kshitijtechno.github.io/#/learnings/hybris/hybris-interview</loc>
+    <loc>https://kshitijtechno.github.io/#/learnings/hybris/hybris-data-modeling</loc>
+    <loc>https://kshitijtechno.github.io/#/learnings/hybris/local-setup</loc>
+    <loc>https://kshitijtechno.github.io/#/learnings/hybris/import-project-intellij</loc>
+    <loc>https://kshitijtechno.github.io/#/learnings/java/java-interview</loc>
+    <loc>https://kshitijtechno.github.io/#/quizes/hybris-quiz</loc>
   </url>
 </urlset>
