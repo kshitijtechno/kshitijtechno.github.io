@@ -180,10 +180,54 @@ const config = {
         XSD(XML schema definition) is items.xsd. Please do check this file for better understanding`,
       },
       {
+        question:`What is range of typecode for deployment table tag?`,
+        answer:`Range is 1 - 32767. 1 - 10000 are reserved for Hybris. 32700 - 32767 are reserved for 
+        extension processing. Rest we can use in development.`
+      },
+      {
         question: "Explain atomictype.",
         answer: `An AtomicType represent a simple java object. The name ('atomic') means 'non-composed' objects.
         <p>Object, Number, Integer, Boolean, String, Map are the example of atomic type.`,
       },
+      {
+        question: "What is Interceptor in SAP Commerce Cloud?",
+        answer: `Interceptors are used to intercept the lifecyle of model in Hybris. For e.g. Before Customer model saves you want to 
+        log some information, or may be after deletion of Customer Model you want to update something in the database. For both scenarios you can
+        implement different interceptors. So basically the purpose of the interceptor is to make sure correct data is deleted or persisted.<br/>
+        SAP Commerce Cloud provides 5 interceptors OOTB. These interceptors are interfaces. These interceptors are available inside de.hybris.platform.servicelayer.interceptor package.
+        <li>LoadInterceptor</li>
+        <li>InitDefaultsInterceptor</li>
+        <li>PrepareInterceptor</li>
+        <li>ValidateInterceptor</li>
+        <li>RemoveInterceptor</li><br/>
+        So to implement the interceptor you have to implement one of above interface.`,
+      },
+      {
+        question :`What is LoadInterceptor?`,
+        answer :`The LoadInterceptor is called whenever a model loads from database.
+        You may use this interface if you want to change the values of model after load.
+        LoadInterceptor have <b>onLoad abstract method</b>.`,
+        image:'image1',
+      },
+      {
+        question : `What is InitDefaultsInterceptor?`,
+        answer: `The Init Defaults Interceptor is called when a model is filled with its default values. This happens either when it is created via the modelService.create method or when the modelService.initDefaults method is called. You can use this interceptor to fill the model with additional default values, apart from the values defined in the items.xml file.
+        This interceptor have <b>onInitDefaults abstract method.</b>`,
+      },
+      {
+        question :`What is PrepareInterceptor?`,
+        answer:`The Prepare Interceptor is called before a model is saved to the database before it is validated by Validate interceptor. Do not use this interceptor to perform validation. Use the Validate Interceptor instead.
+        Prepare Interceptor have <b>onPrepare abstract method.</b>`,
+      },
+      {
+        question :`What is ValidateInterceptor?`,
+        answer:`The Validate Interceptor is called before a model is saved to the database after is been prepared by the Prepare interceptor. You can use Validate Interceptors to validate values of the model. Validate Interceptor have <b>onValidate abstract method.</b>`,
+      },
+      {
+        question :`What is RemoveInterceptor?`,
+        answer:`The Remove Interceptor is called before a model is removed from the database. You can use this interceptor, for example:
+        To remove models that are related to the model but are not in the model context. Remove Interceptor have <b>onRemove abstract method.</b>`,
+      }
     ],  
     hybrisProjectImportIntellij : [
       {
@@ -249,11 +293,11 @@ const config = {
     <atomictype class="java.lang.Number" extends="java.lang.Object" autocreate="true" generate="false"/>
     <atomictype class="java.lang.Integer" extends="java.lang.Number" autocreate="true" generate="false"/>
 </atomictypes>`,
-        textContent4 : `atomictypes : its parent tag.<br/>
-        atomictype : its child tag.<br/>
-        class : it's a mandatory attibute. A Java class should be assigned to this attirbute.<br/>
-        autocreate : If it's true atomictype will be created during initialization. It's optional and default value is true.<br/>
-        generate : it's deprecated now. Has no effect on the atomictype`,
+        textContent4 : `<li>atomictypes : its parent tag.</li>
+        <li>atomictype : its child tag.</li>
+        <li>class : it's a mandatory attibute. A Java class should be assigned to this attirbute.</li>
+        <li>autocreate : If it's true atomictype will be created during initialization. It's optional and default value is true.</li>
+        <li>generate : it's deprecated now. Has no effect on the atomictype</li>`,
         textContent5 : '<b>What if we redefined the atomictype again in my custom folders kshitijtechnocore-items.xml?' , 
         textContent6 : `Build will fail. Build will through an java.lang.IllegalArgumentException due to duplicate type code.<p></p>
         <b>C</b> - collectiontypes : its used to define the collection object.`,
@@ -271,7 +315,6 @@ const config = {
         question : "Who owns Hybris?",
         answers : ["TCS", "SAP", "Tech Mahindra", "Hybris"],
         correctAnswer : "SAP",
-        explaination :``,
       },
       {
         question : "Select which is True.",
@@ -287,7 +330,18 @@ const config = {
         question : "What is the full form of HAC?",
         answers : ["Hybris Administration Console", "There is no full form"],
         correctAnswer : "Hybris Administration Console",
-      },     
+      }, 
+      {
+        question :`What is the range of typecode for deployment table tag?`,
+        answers : [1000, 10000, 32767, 31990],
+        correctAnswer :32767, 
+      },
+      {
+        question :`How many types are there of interceptors?`,
+        answers : [3, 2, 5, 1],
+        correctAnswer :5,
+        explaination :`There are 5 interceptors : LoadInterceptor, InitDefaultsInterceptor, PrepareInterceptor, ValidateInterceptor, RemoveInterceptor.`,          
+      },    
     ],
   };
   
