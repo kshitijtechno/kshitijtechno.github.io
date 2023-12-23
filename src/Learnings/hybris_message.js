@@ -227,6 +227,24 @@ const config = {
         question :`What is RemoveInterceptor?`,
         answer:`The Remove Interceptor is called before a model is removed from the database. You can use this interceptor, for example:
         To remove models that are related to the model but are not in the model context. Remove Interceptor have <b>onRemove abstract method.</b>`,
+      },
+      {
+        question : `What is Listener?`,
+        answer : `Listerns are Java classes in Hybris. Listeners execute when any event orccurs.
+        In an application you can have any number of listener. All listeners get notified with same collection of events.
+        To create listener your class should implement interface AfterSaveListener.
+        <b>afterSave is an abstract method</b>.`,
+      },
+      {
+        question : `What is Cronjob?`,
+        answer : `There are three terms with respect to Cronjobs are Job, CronJob and Trigger. Jobs are Java classes it contains the business logic. Cronjob are cron expression. Triggers are used for scheduling purpose.
+        So Cronjobs are the tasks which are executed at certain point of time.<br/>
+        The default nature for cronjobs are non-abortable. To make job abortable our job should override <b>isAbortable</b> method of AbstractJobPerformable.`,
+      },
+      {
+        question :`What is Impex in Hybris?`,
+        answer :`Impex are used to export and import Data into database. Impex usually have kind of data : macro, header, values.
+        There are four modes for impex execution are INSERT, UPDATE, INSERT_UPDATE, REMOVE.`
       }
     ],  
     hybrisProjectImportIntellij : [
@@ -271,7 +289,7 @@ const config = {
         Data modeling is a crucial part for Hybris application. Mastering the data modeling is very much needed to work on Hybris.
         Also this is the hot topic for interviewers. Let's deep dive into Data modeling concept's.<br/>
         Below is items.xml for kshitijtechno hybris project.<br/>
-        <b>kshitijtechnocore-items.xml</b> is where we have to define our Student itemtype. In Hybris we will call Customer model as Customer itemtype.<br/>
+        <b>kshitijtechnocore-items.xml</b> is where we have to define our Student itemtype. In Hybris we will call Student model as Student itemtype.<br/>
         items.xml resides inside the coreextension/resources folder of the project. For kshitijtechno, kshitijtechnocore is the core extension.`,
         textContent2 :`We have another core-items.xml inside platform. This is provided by Hybris OOTB to support the electronics and apparel store functionalities.
         During development you should not modify this core-items.xml instead modify which exists inside custom folder. 
@@ -341,7 +359,30 @@ const config = {
         answers : [3, 2, 5, 1],
         correctAnswer :5,
         explaination :`There are 5 interceptors : LoadInterceptor, InitDefaultsInterceptor, PrepareInterceptor, ValidateInterceptor, RemoveInterceptor.`,          
-      },    
+      }, 
+      {
+        question :`Which database Hybris uses OOTB?`,
+        answers: ["HSQL", "MySql", "Oracle", "MongoDB"],
+        correctAnswer:"HSQL",
+        explaination: "Hybris uses HSQL OOTB. Rest other database can also be integrated with Hybris."
+      },
+      {
+        question :`Which web server Hybris uses OOTB?`,
+        answers: ["Apache Tomcat", "Weblogic", "Jetty", "Mongoose"],
+        correctAnswer:"Apache Tomcat",
+        explaination: "Hybris uses Apache Tomcat OOTB to deploy the web application."
+      },
+      {
+        question :`All cronjobs are abortable in Hybris?`,
+        answers: ["Yes", "No"],
+        correctAnswer:"No",
+        explaination: "The default nature for cronjobs are non-abortable. To make job abortable our job should override isAbortable method of AbstractJobPerformable."
+      },
+      {
+        question :`What are the various modes allowed in header of impex?`,
+        answers: ["INSERT, INSERT_UPDATE, UPDATE, DELETE", "INSERT, UPDATE, REMOVE, INSERT_UPDATE", "INSERT_UPDATE, UPDATE, REMOVE, PUT", "INSERT_UPDATE, UPDATE, REMOVE"],
+        correctAnswer:"INSERT, UPDATE, REMOVE, INSERT_UPDATE",
+      },  
     ],
   };
   
