@@ -75,7 +75,7 @@ const Home = () => {
         <Typography variant="h4" gutterBottom>
             <div className="aboutus">
             <header>
-    <h1>Welcome to Kshitij Techno - Your Gateway to Innovative Solutions!</h1>
+    <h1><center>Kshitij Techno - Your Gateway to Innovative Solutions!</center></h1>
   </header>
   <section>
     <p>
@@ -102,7 +102,7 @@ const Home = () => {
   </ol>
             </div>
 
-
+<hr/>
             <div><center>
             <img src={profilePic} id="fullscreenImage" alt="Kshitij Wardhan Ahirwar" height="150" onClick={toggleFullScreen}/></center></div>
             <div className="introBody">
