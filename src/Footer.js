@@ -28,7 +28,8 @@ const Footer = () => {
         backgroundColor: '#f5f5f5',
         padding: 3,
         position: 'relative',
-        bottom: 0,        
+        bottom: 0,
+        marginTop: '15px',
       }}
     >
       <Typography variant="body2" color="text.secondary" align="center">
