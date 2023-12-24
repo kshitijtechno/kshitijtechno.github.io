@@ -8,6 +8,9 @@ const config = {
     contact: "Contact",
     disclaimer: "Disclaimer",
     createby: "Created by : Kshitij Wardhan Ahirwar",
+    url_linkedIn:"https://www.linkedin.com/in/kshitijwardhan/",
+    url_facebook:"https://www.facebook.com/kshitij.wardhanahirwar/",
+    url_instagram:"https://www.instagram.com/kshitijwardhan/",
     
     home_showDialog: false,
     home_dialog_title: "Request",
