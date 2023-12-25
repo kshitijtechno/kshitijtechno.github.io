@@ -114,63 +114,98 @@ const config = {
       {
         question: "What is items.xml?",
         answer: `items.xml is an xml file. It holds items definition for entire application. Usually it resides inside core extensions resources folder.
-        Standard naming convention for the file is *extensionname*-items.xml e.g. core-items.xml. Here "core" is the extension name. Below is the structure of items.xml`,
-        code:`        <items>
-          <atomictypes>
-            <atomictype class="java.lang.Object" autocreate="true" generate="false"/>
-            <atomictype class="java.lang.Integer" extends="java.lang.Number" autocreate="true" generate="false"/>
-            <atomictype class="java.lang.String" extends="java.lang.Object" autocreate="true" generate="false"/>
-          </atomictypes>
-          <collectiontypes>
-            <collectiontype code="ExampleCollection" elementtype="Item" autocreate="true" generate="false" type="list"/>
-            <collectiontype code="DeliveryModeCollection" elementtype="DeliveryMode" autocreate="true" generate="false" type="set"/>
-            <collectiontype code="MediaCollection" elementtype="Media" autocreate="true" generate="false"/>
-            <collectiontype code="AadharNumberCollection" elementtype="java.lang.Number" autocreate="true" generate="false"/>
-          </collectiontypes>
-          <enumtypes>
-            <enumtype code="TestEnum">
-              <value code="testValue1"/>
-              <value code="testValue2"/>
-            </enumtype>
-            <enumtype code="CredtiCardType">
-              <value code="amex"/>
-              <value code="visa"/>
-              <value code="master"/>
-            </enumtype>
-          </enumtypes>
-          <maptypes>
-            <maptype code="ExampleMap"
-                     argumenttype="Student"
-                     returntype="java.lang.Integer"
-                     autocreate="true"
-                     generate="false"/>
-            <maptype/>
-          </maptypes>
-          <relations>
-            <relation code="OrderDiscountRelation" autocreate="true" generate="false" localized="false"
-              deployment="com.wardhan.techno.OrderDiscountRelation">
-              <sourceElement qualifier="orders" type="AbstractOrder" cardinality="many" ordered="false">
-                <modifiers read="true" write="true" search="true" optional="true"/>
-              </sourceElement>
-              <targetElement qualifier="discounts" type="Discount" cardinality="many" ordered="true"
-                collectiontype="list">
-                <modifiers read="true" write="true" search="true" optional="true"/>
-              </targetElement>
-            </relation>
-          </relations>
-          <itemtypes>
-            <itemtype code="Customer" extends="User" jaloclass="de.hybris.platform.jalo.user.Customer" 
-              autocreate="true" generate="true">
-              <deployment table="Customer" typecode="31000"/>
-              <attributes>
-                <attribute autocreate="true" qualifier="customerId" type="java.lang.String">
-                  <modifiers read="true" write="true" search="true" optional="true"/>
-                  <persistence type="property"/>
-                </attribute>
-              </attributes>
-            </itemtype>
-          </itemtypes>
-        </items>`,
+        Standard naming convention for the file is *extensionname*-items.xml e.g. core-items.xml. Here "core" is the extension name. Below is the structure of items.xml. In below code I have commented atomic types because it will cause build issue. Given atomictypes are already definded inside platform core-items.xml`,
+        code:`        <?xml version="1.0" encoding="ISO-8859-1"?>
+        <items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="items.xsd">
+        <!--    <atomictypes>-->
+        <!--        <atomictype class="java.lang.Object" autocreate="true" generate="false"/>-->
+        <!--        <atomictype class="java.lang.Number" extends="java.lang.Object" autocreate="true" generate="false"/>-->
+        <!--        <atomictype class="java.lang.Integer" extends="java.lang.Number" autocreate="true" generate="false"/>-->
+        <!--    </atomictypes>-->
+            <collectiontypes>
+                    <collectiontype code="AddressList" elementtype="StudentAddress" autocreate="true" generate="false" type="list"/>
+                    <collectiontype code="SubjectList" elementtype="SubjectsEnum" autocreate="true" generate="false" type="list"/>
+                </collectiontypes>
+                <enumtypes>
+                    <enumtype code="AddressTypeEnum" autocreate="true" generate="true">
+                        <value code="Home" />
+                        <value code="Office" />
+                        <value code="Other" />
+                    </enumtype>
+                    <enumtype code="SubjectsEnum" autocreate="true" generate="true">
+                        <value code="Hindi" />
+                        <value code="English" />
+                        <value code="Maths" />
+                    </enumtype>
+                </enumtypes>
+                <maptypes>
+                    <maptype code="SubjectMap"
+                             argumenttype="java.lang.Integer"
+                             returntype="SubjectList"
+                             autocreate="true"/>
+                </maptypes>
+                <relations>
+                    <relation code="StudentHobies" localized="false">
+                        <sourceElement type="Student" qualifier="student" cardinality="one">
+                            <modifiers read="true" write="true" search="true" optional="true"/>
+                        </sourceElement>
+                        <targetElement type="Hobbies" qualifier="hobby" cardinality="many">
+                            <modifiers read="true" write="true" search="true" optional="true"/>
+                        </targetElement>
+                    </relation>
+                </relations>
+                <itemtypes>
+                    <itemtype code="Hobbies" extends="GenericItem">
+                        <deployment table="Hobies" typecode="11002"/>
+                        <attributes>
+                            <attribute qualifier="hobby" type="java.lang.String">
+                                <modifiers read="true" write="true" search="true" optional="true"/>
+                                <persistence type="property"/>
+                            </attribute>
+                        </attributes>
+                    </itemtype>
+        
+                    <itemtype code="StudentAddress" extends="Address"  autocreate="true" generate="true">
+                        <attributes>
+                            <attribute autocreate="true" qualifier="addressType" type="AddressTypeEnum">
+                                <modifiers read="true" write="true" search="true" optional="true"/>
+                                <persistence type="property"/>
+                            </attribute>
+                            <attribute autocreate="true" qualifier="houseNumber" type="java.lang.Integer">
+                                <modifiers read="true" write="true" search="true" optional="true"/>
+                                <persistence type="property"/>
+                            </attribute>
+                            <attribute autocreate="true" qualifier="pincode" type="java.lang.Integer">
+                                <modifiers read="true" write="true" search="true" optional="true"/>
+                                <persistence type="property"/>
+                            </attribute>
+                        </attributes>
+                    </itemtype>
+        
+                    <itemtype code="Student" extends="GenericItem"  autocreate="true" generate="true">
+                        <deployment table="Student" typecode="11000"/>
+                        <attributes>
+                            <attribute autocreate="true" qualifier="studentId" type="java.lang.Integer">
+                                <modifiers read="true" write="true" search="true" optional="true"/>
+                                <persistence type="property"/>
+                            </attribute>
+                            <attribute autocreate="true" qualifier="studentName" type="java.lang.String">
+                                <modifiers read="true" write="true" search="true" optional="true"/>
+                                <persistence type="property"/>
+                            </attribute>
+                            <attribute autocreate="true" qualifier="studentAddress" type="AddressList">
+                                <modifiers read="true" write="true" search="true" optional="true"/>
+                                <persistence type="property"/>
+                            </attribute>
+                            <attribute autocreate="true" qualifier="subjects" type="SubjectMap">
+                                <modifiers read="true" write="true" search="true" optional="true"/>
+                                <persistence type="property"/>
+                            </attribute>
+                        </attributes>
+                    </itemtype>
+                </itemtypes>
+        </items>
+        `,
       },
       {
         question: "Name the basic tags used in items.xml",
@@ -188,6 +223,21 @@ const config = {
         question: "Explain atomictype.",
         answer: `An AtomicType represent a simple java object. The name ('atomic') means 'non-composed' objects.
         <p>Object, Number, Integer, Boolean, String, Map are the example of atomic type.`,
+      },
+      {
+        question: "What is collectiontypes in Hybris?",
+        answer: `In Hybris collection behave same as Java. Collection types are used to store group of Object. These object can be type of premitive like Integers, String or non-primitive like Customer, Student.
+        <ul>
+        <li>code : It's an identifier for collection.</li>
+        <li>elementtype : It tells what kind of objects can be stored in collection. In below code snippet AddressList is collection and StudentAddress is the type of object to store inside collection.</li>
+        <li>autocreate : It instructs hybris to create collection inside db during update or initialization.</li>
+        <li>generate : Its deprecated have no impact. We can remove it.</li>
+        <li>type : type represents collection nature. We can give "list", "set", "collection" to type. List is an ordered List. Set is used to store unique values. collection is used to store collection.</li>
+        </ul>`,
+        code:`<collectiontypes>
+        <collectiontype code="AddressList" elementtype="StudentAddress" autocreate="true" generate="false" type="list" />
+        <collectiontype code="SubjectList" elementtype="SubjectsEnum" autocreate="true" generate="false" type="list"/>
+    </collectiontypes>`,     
       },
       {
         question: "What is Interceptor in SAP Commerce Cloud?",
