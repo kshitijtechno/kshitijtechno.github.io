@@ -5,6 +5,8 @@ import {
     Grid,
   } from '@mui/material';
 import TrackPageAnalytics from './TrackPageAnalytics';
+import ClientComment from './ClientComment';
+
 
 const ContactUs = () => {
   return (
@@ -35,6 +37,12 @@ const ContactUs = () => {
             <div>
             </div>
 
+        </Grid>
+        
+        <Grid item xs={1}>          
+        </Grid>        
+        <Grid item xs={10}>
+            <ClientComment />
         </Grid>
         
     </Grid>

@@ -295,6 +295,23 @@ const config = {
         question :`What is Impex in Hybris?`,
         answer :`Impex are used to export and import Data into database. Impex usually have kind of data : macro, header, values.
         There are four modes for impex execution are INSERT, UPDATE, INSERT_UPDATE, REMOVE.`
+      },
+      {
+        question : `What is deployment tag?`,
+        answer :`deployment tag is child tag for itemtype parent tag. deployment tag is used to define the tables in items.xml. If any item extends 
+        GenericItem then deployment properties are mandatory to set for given item.<br/>
+        deployment tag has 2 attributes.<br/>
+        <ul><li>table : its a table name which gets created in db post update or initialization.</li>
+        <li>typecode : typecode is a number which is used by hybris internally to idetify the itemtype uniquely.</li></ul>`,
+        code : ` <itemtype code="Student" extends="GenericItem"  autocreate="true" generate="true">
+        <deployment table="Student" typecode="11000"/>
+        <attributes>
+            <attribute autocreate="true" qualifier="studentId" type="java.lang.Integer">
+                <modifiers read="true" write="true" search="true" optional="true"/>
+                <persistence type="property"/>
+            </attribute>
+        </attributes>
+    </itemtype>`
       }
     ],  
     hybrisProjectImportIntellij : [

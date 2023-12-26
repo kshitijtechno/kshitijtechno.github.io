@@ -54,7 +54,7 @@ const ClientComment = () => {
       }
   return (
       <div>
-    <center><h2>Customer comments</h2></center>
+    <center><h2>Comments</h2></center>
         <div className="comment-container"> 
             <ul className="comment-list">
                 {comments.map((comment, index) => (
