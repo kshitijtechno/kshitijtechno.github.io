@@ -451,6 +451,123 @@ const config = {
         correctAnswer:"INSERT, UPDATE, REMOVE, INSERT_UPDATE",
       },  
     ],
+    hybrisLogical : [
+      {
+        textContent1 :`<b>These are basic java programs which are frequently asked in interviews.<p>Code 1</p></b>`,
+        code1 : `
+package com.codingcrust;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class ArrayQuest {
+    //There is an array write a logic to get the numbers which starts with 1. e.g. [1,3,6,112,64,12,0,3]. Asked in Coforge Java Developer interview.
+    public static void quest1(Integer[] arr){
+        System.out.println(Arrays.stream(arr).filter(ele -> ele.toString().startsWith("1")).collect(Collectors.toList()));
+    }
+    //There is an array write a logic to get the unique numbers e.g. [1,1,1,3,6,112,64,12,0,3,112]
+    public static void quest2(Integer[] arr){
+        System.out.println(Arrays.toString(Arrays.stream(arr).distinct().toArray()));
+    }
+    //Write logic to get numbers lesser than 64 in an array e.g. [1,1,1,3,6,112,64,12,0,3,112]
+    public static void quest3(Integer[] arr){
+        System.out.println(Arrays.stream(arr).filter(ele -> (ele < 64)).collect(Collectors.toList()));
+    }
+    //There is an array write a logic to get the String which starts with K and L. e.g. ["Kshitij","Sunmin","Kruti","Khabar","Liyakat","Anjum","Kareem"]
+    public static void quest4(String[] arr){
+        System.out.println(Arrays.stream(arr).filter(ele -> ele.startsWith("K") || ele.startsWith("L")).collect(Collectors.toList()));
+    }
+
+    //There is an array write a logic to get the numbers max. e.g. [1,3,6,112,64,12,0,3]
+    public static void quest5(Integer[] arr){
+        System.out.println(Arrays.stream(arr).sorted().collect(Collectors.toList()).get(arr.length-1));
+    }
+
+    //There is an array write a logic to get the numbers min. e.g. [1,3,6,112,64,12,0,3]
+    public static void quest6(Integer[] arr){
+        System.out.println(Arrays.stream(arr).sorted().findFirst().get());
+    }
+
+    //There is an array write a logic to remove first character from each String. e.g. ["Kshitij","Sunmin","Kruti","Khabar","Liyakat","Anjum","Kareem"]
+    public static void quest7(String[] arr){
+        ArrayList<String> list = new ArrayList<>();
+        Arrays.stream(arr).forEach(ele -> list.add(ele.substring(1)));
+        System.out.println(list);
+    }
+
+    //Sort and print in reverse order. e.g. [1,3,6,112,64,12,0,3].
+    public static void quest8(Integer[] arr){
+        List<Integer> list = Arrays.stream(arr).sorted().collect(Collectors.toList());
+        Collections.reverse(list);
+        System.out.println(list);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Question 1: There is an array write a logic to get the numbers which starts with 1. e.g. [1,1,1,3,6,112,64,12,0,3,112].Asked in Coforge Java Developer interview.");
+        quest1(new Integer[]{1,1,1,3,6,112,64,12,0,3,112});
+
+        System.out.println("Question 2: There is an array write a logic to get the unique numbers e.g. [1,1,1,3,6,112,64,12,0,3,112]");
+        quest2(new Integer[]{1,1,1,3,6,112,64,12,0,3,112});
+
+        System.out.println("Question 3: Write logic to get numbers lesser than 64 in an array e.g. [1,1,1,3,6,112,64,12,0,3,112]");
+        quest3(new Integer[]{1,1,1,3,6,112,64,12,0,3,112});
+
+        System.out.println("Question 4: There is an array write a logic to get the String which starts with K and L. e.g. ["Kshitij","Sunmin","Kruti","Khabar","Liyakat","Anjum","Kareem"]");
+        quest4(new String[]{"Kshitij","Sunmin","Kruti","Khabar","Liyakat","Anjum","Kareem"});
+
+        System.out.println("Question 5: There is an array write a logic to get the numbers max. e.g. [1,3,6,112,64,12,0,3]");
+        quest5(new Integer[]{1,3,6,112,64,12,0,3});
+
+        System.out.println("Question 6: There is an array write a logic to get the numbers min. e.g. [1,3,6,112,64,12,0,3]");
+        quest6(new Integer[]{1,3,6,112,64,12,0,3});
+
+        System.out.println("Question 7: There is an array write a logic to remove first character from each String. e.g. ["Kshitij","Sunmin","Kruti","Khabar","Liyakat","Anjum","Kareem"]");
+        quest7(new String[]{"Kshitij", "Sunmin", "Kruti", "Khabar", "Liyakat", "Anjum", "Kareem"});
+
+        System.out.println("Question 8: Sort and print in reverse order. e.g. [1,3,6,112,64,12,0,3]");
+        quest8(new Integer[]{1,3,6,112,64,12,0,3});
+    }
+}
+        `,
+        textContent2: `<b>Code 2</b>`,
+        code2:`package com.codingcrust;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+public class ReverseArray {
+    public static String [] reverseWay1(String [] arr)
+    {
+        String [] reversed = new String [arr.length];
+        int count = 0;
+        for (int i = arr.length-1 ; i >= 0 ; i--) {
+            reversed[count] = arr[i];
+            count++;
+        }
+        return reversed;
+    }
+    public static String [] reverseWay2(String [] arr)
+    {
+        List<String> str = Arrays.asList(arr);
+        Collections.reverse(Arrays.asList(arr));
+        return (String[]) str.toArray();
+    }
+
+    public static void main(String[] args) {
+        String[] arr = new String[]{"K","S","H","I","T","I","J"};
+        Arrays.stream(reverseWay1(arr)).forEach(System.out::print);
+        System.out.println();
+        System.out.println("------------");
+        Arrays.stream(reverseWay2(arr)).forEach(System.out::print);
+    }
+}
+`,
+      },
+    ],
   };
   
 export default config;

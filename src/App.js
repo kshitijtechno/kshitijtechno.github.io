@@ -11,6 +11,7 @@ import Layout from './Layout';
 import ReactGA from 'react-ga4';
 import HybrisInterview from './Learnings/HybrisInterview';
 import JavaInterview from './Learnings/JavaInterview';
+import JavaLogical from './Learnings/JavaLogical';
 import config from './config';
 import HybrisProjectImportIntellij from './Learnings/HybrisProjectImportIntellij';
 import HybrisDataModeling from './Learnings/HybrisDataModeling';
@@ -32,6 +33,7 @@ function App() {
             <Route path={config.uri_hybrisLocalSetup} element={<div className="content"><HybrisLocalSetupGuide /></div>} />
             <Route path={config.uri_hybrisProjectImportIntellij} element={<div className="content"><HybrisProjectImportIntellij /></div>} />
             <Route path={config.uri_javaInterview} element={<div className="content"><JavaInterview /></div>} />
+            <Route path={config.uri_javaLogical} element={<div className="content"><JavaLogical /></div>} />
             <Route path={config.uri_hybrisquiz} element={<div className="content"><HybrisQuiz /></div>} />
             <Route path="/contactus" element={<div className="content"><ContactUs /></div>} />
             <Route path="/videos" element={<div className="content"><Videos /></div>} />

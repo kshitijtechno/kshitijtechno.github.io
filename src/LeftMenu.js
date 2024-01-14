@@ -65,8 +65,13 @@ const LeftMenu = () => {
                 <ul>
                   <h3>2. Java</h3>
                   <li>
+                    <Link to={config.uri_javaLogical} onClick={handleLinkClick}>
+                     2.1 Java Logical
+                    </Link>
+                  </li>
+                  <li>
                     <Link to={config.uri_javaInterview} onClick={handleLinkClick}>
-                     2.1 Java interview
+                     2.2 Java interview
                     </Link>
                   </li>
                 </ul>
@@ -119,8 +124,13 @@ const LeftMenu = () => {
                 <ul>
                   <h3>2. Java</h3>
                   <li>
+                    <Link to={config.uri_javaLogical} onClick={handleLinkClick}>
+                     2.1 Java Logical
+                    </Link>
+                  </li>
+                  <li>
                     <Link to={config.uri_javaInterview} onClick={handleLinkClick}>
-                      2.1 Java interview
+                      2.2 Java interview
                     </Link>
                   </li>
                 </ul>
