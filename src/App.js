@@ -16,6 +16,8 @@ import config from './config';
 import HybrisProjectImportIntellij from './Learnings/HybrisProjectImportIntellij';
 import HybrisDataModeling from './Learnings/HybrisDataModeling';
 import HybrisQuiz from './Quizes/HybrisQuiz';
+import FreeRecharge from './Quizes/FreeRecharge';
+
 
 
 
@@ -35,6 +37,8 @@ function App() {
             <Route path={config.uri_javaInterview} element={<div className="content"><JavaInterview /></div>} />
             <Route path={config.uri_javaLogical} element={<div className="content"><JavaLogical /></div>} />
             <Route path={config.uri_hybrisquiz} element={<div className="content"><HybrisQuiz /></div>} />
+            <Route path={config.uri_freerecharge} element={<div className="content"><FreeRecharge /></div>} />
+
             <Route path="/contactus" element={<div className="content"><ContactUs /></div>} />
             <Route path="/videos" element={<div className="content"><Videos /></div>} />
             <Route path="/disclaimer" element={<div className="content"><Disclaimer /></div>} />

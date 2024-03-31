@@ -114,6 +114,9 @@ const AppNavBar = () => {
                             <ListItem button component={Link} to={config.uri_hybrisquiz} onClick={toggleDrawer(false)} style={{ paddingLeft: '40px' }}>
                               <ListItemText primary="Hybris" />
                             </ListItem>
+                            <ListItem button component={Link} to={config.uri_freerecharge} onClick={toggleDrawer(false)} style={{ paddingLeft: '40px' }}>
+                              <ListItemText primary="Free Recharge" />
+                            </ListItem>
                           </List>
                   </Collapse>      
                   <ListItem button component={Link} to="/videos" onClick={toggleDrawer(false)}>
@@ -216,6 +219,11 @@ const AppNavBar = () => {
               <MenuItem onClick={() => handleMenuClose(setQuizMenuOpen)}>
                 <Button color="inherit" component={Link} to={config.uri_hybrisquiz}>    
                   Hybris
+                </Button>
+              </MenuItem>
+              <MenuItem onClick={() => handleMenuClose(setQuizMenuOpen)}>
+                <Button color="inherit" component={Link} to={config.uri_freerecharge}>    
+                  Free Recharge
                 </Button>
               </MenuItem>
             </Menu>

@@ -39,7 +39,12 @@ const LeftMenuQuizes = () => {
                     <Link to={config.uri_hybrisquiz} onClick={handleLinkClick}>
                      1.1 Hybris Quiz
                     </Link>
-                  </li>                  
+                  </li>
+                  <li>
+                    <Link to={config.uri_freerecharge} onClick={handleLinkClick}>
+                     1.2 Free Recharge
+                    </Link>
+                  </li>                   
                 </ul>
               </nav>
             </div>
