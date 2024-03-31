@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.62be9424.css",
-    "main.js": "/static/js/main.7660973c.js",
+    "main.js": "/static/js/main.b488408d.js",
     "static/js/787.bd2101fc.chunk.js": "/static/js/787.bd2101fc.chunk.js",
     "static/media/image13.png": "/static/media/image13.40ed50d5a1aad1267186.png",
     "static/media/homepagebanner2.jpg": "/static/media/homepagebanner2.c641bc777a070dc61899.jpg",
@@ -32,6 +32,7 @@
     "static/media/image29.png": "/static/media/image29.205dc9eb06d4bfffc25b.png",
     "static/media/image24.png": "/static/media/image24.f93c241e0698927a8162.png",
     "static/media/logo-no-bg.png": "/static/media/logo-no-bg.d3fead6fe60a3816f215.png",
+    "static/media/april-fool.jpg": "/static/media/april-fool.e95f3c19e214f5a35e03.jpg",
     "static/media/image22.png": "/static/media/image22.430dce9ae83bd9880d9a.png",
     "static/media/image3.png": "/static/media/image3.beecc977b000b41f5f09.png",
     "static/media/image4.png": "/static/media/image4.b4eb9ada6f53d48d446f.png",
@@ -46,11 +47,11 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.62be9424.css.map": "/static/css/main.62be9424.css.map",
-    "main.7660973c.js.map": "/static/js/main.7660973c.js.map",
+    "main.b488408d.js.map": "/static/js/main.b488408d.js.map",
     "787.bd2101fc.chunk.js.map": "/static/js/787.bd2101fc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.62be9424.css",
-    "static/js/main.7660973c.js"
+    "static/js/main.b488408d.js"
   ]
 }
