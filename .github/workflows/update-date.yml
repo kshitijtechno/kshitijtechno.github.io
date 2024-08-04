@@ -29,7 +29,6 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            const { github, context } = require('@actions/github');
             const octokit = github.getOctokit(process.env.GITHUB_TOKEN);
             await octokit.rest.actions.createWorkflowDispatch({
               owner: context.repo.owner,
