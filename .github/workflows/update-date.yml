@@ -18,9 +18,8 @@ jobs:
           node -e "
             const fs = require('fs');
             const now = new Date();
-            const istOffset = 5.5 * 60 * 60 * 1000; // IST is UTC+5:30
-            const istTime = new Date(now.getTime() + istOffset);
-            fs.writeFileSync('public/lastModified.txt', 'Site last Updated: ' + istTime.toString());
+            const istTimeString = now.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
+            fs.writeFileSync('public/lastModified.txt', 'Site last Updated: ' + istTimeString);
           "
 
       - name: Commit and push changes
