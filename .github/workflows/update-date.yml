@@ -23,10 +23,19 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add public/lastModified.txt
           git commit -m "Update last modified date" || echo "No changes to commit"
-          
-          # Fetch latest changes from remote
-          git fetch origin master
-          git rebase origin/master
-          
-          # Push changes
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:master
+
+      - name: Trigger deployment workflow
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { GITHUB_TOKEN } = process.env;
+            const octokit = github.getOctokit(GITHUB_TOKEN);
+            await octokit.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'deploy.yml',
+              ref: 'master'
+            });
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
