@@ -16,8 +16,8 @@ const Footer = () => {
       .then(response => response.text())
       .then(date => {
         const utcDate = new Date(date); // Assuming date format is compatible with Date constructor
-        const istDate = utcDate.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
-        setLastModifiedDate(istDate);
+        const istDate = new Date(utcDate.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }));
+        setLastModifiedDate(istDate.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }));
       })
       .catch(error => console.error('Error fetching last modified date:', error));
   }, []);
@@ -64,7 +64,7 @@ const Footer = () => {
           <img src={FaceBookIcon} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%' }} onClick={() => handleIconClick("fb")}/>
           <img src={InstaIcon} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%' }} onClick={() => handleIconClick("insta")}/>
           <div>
-            {lastModifiedDate && <p>Site last Updated: {lastModifiedDate} ist</p>}
+            {lastModifiedDate && <p>Site last Updated: {lastModifiedDate}</p>}
           </div>
         </Grid>
       </Grid>        
