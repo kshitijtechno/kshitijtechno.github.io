@@ -25,7 +25,6 @@ const Home = () => {
       }, []);
 
 
-
       const handleClose = () => {
 
         setDialogOpen(false);
