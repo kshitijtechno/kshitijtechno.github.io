@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box, Typography, Grid } from '@mui/material';
 import config from './config';
 import { Link } from 'react-router-dom';
@@ -10,25 +10,28 @@ import MyIntro from './MyIntro';
 
 const Footer = () => {
   const [lastModifiedDate, setLastModifiedDate] = useState('');
+
   useEffect(() => {
     fetch('/lastModified.txt')
       .then(response => response.text())
-      .then(date => setLastModifiedDate(date))
+      .then(date => {
+        const utcDate = new Date(date); // Assuming date format is compatible with Date constructor
+        const istDate = utcDate.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
+        setLastModifiedDate(istDate);
+      })
       .catch(error => console.error('Error fetching last modified date:', error));
   }, []);
 
   const handleIconClick = (event) => {
-    if(event === "fb")
-    {
+    if(event === "fb") {
       window.open(config.url_facebook, '_blank');
-    }
-    else if(event === "insta"){
+    } else if(event === "insta") {
       window.open(config.url_instagram, '_blank');
-    }
-    else if(event === "linkedIn"){
+    } else if(event === "linkedIn") {
       window.open(config.url_linkedIn, '_blank');
     }    
   };
+
   return (
     <Box
       component="footer"
@@ -44,13 +47,13 @@ const Footer = () => {
         © {new Date().getFullYear()} {config.siteName}. All rights reserved.
       </Typography>
       <Typography variant="body2" color="text.secondary" align="center">
-      {config.createby}
+        {config.createby}
       </Typography>
       <Typography variant="body2" color="text.secondary" align="center">
-      <Link to="/contactus">{config.contact}</Link>
+        <Link to="/contactus">{config.contact}</Link>
       </Typography>
       <Typography variant="body2" color="text.secondary" align="center">
-      <Link to="/disclaimer">{config.disclaimer}</Link>
+        <Link to="/disclaimer">{config.disclaimer}</Link>
       </Typography>
       <Typography variant="body2" color="text.secondary" align="center">
         <MyIntro/>
@@ -61,14 +64,12 @@ const Footer = () => {
           <img src={FaceBookIcon} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%' }} onClick={() => handleIconClick("fb")}/>
           <img src={InstaIcon} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%' }} onClick={() => handleIconClick("insta")}/>
           <div>
-            
-            {lastModifiedDate && <p>Site last Updated: {lastModifiedDate}</p>}
+            {lastModifiedDate && <p>Site last Updated: {lastModifiedDate} ist</p>}
           </div>
         </Grid>
       </Grid>        
       <ScrollToTopButton/>
     </Box>
-    
   );
 };
 
