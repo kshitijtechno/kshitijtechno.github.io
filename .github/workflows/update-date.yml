@@ -30,7 +30,8 @@ jobs:
         with:
           script: |
             const { GITHUB_TOKEN } = process.env;
-            const octokit = github.getOctokit(GITHUB_TOKEN);
+            const { GitHub } = require('@actions/github');
+            const octokit = new GitHub(GITHUB_TOKEN);
             await octokit.rest.actions.createWorkflowDispatch({
               owner: context.repo.owner,
               repo: context.repo.repo,
