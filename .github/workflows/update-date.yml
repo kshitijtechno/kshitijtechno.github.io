@@ -12,8 +12,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Update last modified date
-        run: echo "$(date)" > public/lastModified.txt
+      - name: Update last modified date in IST
+        run: |
+          # Update the lastModified.txt with the current date in IST
+          node -e "
+            const fs = require('fs');
+            const now = new Date();
+            const istOffset = 5.5 * 60 * 60 * 1000; // IST is UTC+5:30
+            const istTime = new Date(now.getTime() + istOffset);
+            fs.writeFileSync('public/lastModified.txt', 'Site last Updated: ' + istTime.toString());
+          "
 
       - name: Commit and push changes
         env:
