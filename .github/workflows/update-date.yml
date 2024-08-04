@@ -3,7 +3,7 @@ name: Update Last Modified Date
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   update-date:
@@ -25,8 +25,8 @@ jobs:
           git commit -m "Update last modified date" || echo "No changes to commit"
           
           # Fetch latest changes from remote
-          git fetch origin main
-          git rebase origin/main
+          git fetch origin master
+          git rebase origin/master
           
           # Push changes
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:main
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:master
