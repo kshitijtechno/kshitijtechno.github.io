@@ -1,5 +1,4 @@
 import { Container, Paper, Typography } from '@mui/material';
-import profilePic from './images/introme1.jpeg';
 import './App.css';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -20,10 +19,6 @@ import {
 
 const Home = () => {
   const [dialogOpen, setDialogOpen] = useState(false); 
-    function toggleFullScreen() {
-        const image = document.getElementById('fullscreenImage');
-        image.classList.toggle('fullscreen');
-      }
       useEffect(() => {
         setDialogOpen(config.home_showDialog);
         
@@ -81,7 +76,7 @@ const Home = () => {
   </header>
   <section>
     <p>
-      Are you a student looking for minor or major project, or company seeking a cutting-edge web presence, or an educational institution eager to embrace digital transformation? Look no further! Kshitij Techno, is a group of highly technical software developers, ready to bring your visions to life. From crafting unique and efficient solutions for students' minor and major projects to elevating companies and educational institutions through tailor-made web applications, We thrive on turning ideas into reality.
+      Are you a student looking for minor or major project? or company seeking a cutting-edge web presence, or an educational institution eager to embrace digital transformation? Look no further! Kshitij Techno, is a group of highly technical software developers, ready to bring your visions to life. From crafting unique and efficient solutions for students' minor and major projects to elevating companies and educational institutions through tailor-made web applications, We thrive on turning ideas into reality.
     </p>
     <p>
       Let's embark on a journey of innovation together, where your aspirations meet exceptional digital solutions. Explore the possibilities with Kshitij Techno and redefine what's possible in the world of software development!
