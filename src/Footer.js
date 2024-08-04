@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useState, useEffect } from 'react';
 import { Box, Typography, Grid } from '@mui/material';
 import config from './config';
 import { Link } from 'react-router-dom';
@@ -6,9 +6,17 @@ import ScrollToTopButton from './ScrollToTopButton';
 import FaceBookIcon from './images/icons/fb.png';
 import InstaIcon from './images/icons/insta.png';
 import LinkedInIcon from './images/icons/linkedIn.png';
-
+import MyIntro from './MyIntro';
 
 const Footer = () => {
+  const [lastModifiedDate, setLastModifiedDate] = useState('');
+  useEffect(() => {
+    fetch('/lastModified.txt')
+      .then(response => response.text())
+      .then(date => setLastModifiedDate(date))
+      .catch(error => console.error('Error fetching last modified date:', error));
+  }, []);
+
   const handleIconClick = (event) => {
     if(event === "fb")
     {
@@ -44,11 +52,18 @@ const Footer = () => {
       <Typography variant="body2" color="text.secondary" align="center">
       <Link to="/disclaimer">{config.disclaimer}</Link>
       </Typography>
+      <Typography variant="body2" color="text.secondary" align="center">
+        <MyIntro/>
+      </Typography>      
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
           <img src={LinkedInIcon} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%' }} onClick={() => handleIconClick("linkedIn")}/>
           <img src={FaceBookIcon} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%' }} onClick={() => handleIconClick("fb")}/>
           <img src={InstaIcon} alt="Kshitij Wardhan Ahirwar" style={{ height: 'auto', maxWidth: '100%' }} onClick={() => handleIconClick("insta")}/>
+          <div>
+            
+            {lastModifiedDate && <p>Site last Updated: {lastModifiedDate}</p>}
+          </div>
         </Grid>
       </Grid>        
       <ScrollToTopButton/>

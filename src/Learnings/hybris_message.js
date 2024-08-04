@@ -568,6 +568,34 @@ public class ReverseArray {
 `,
       },
     ],
+    introText: [
+      {
+        textContent1:`
+        <div className="introBody">
+
+<p>Greetings! I'm <strong>Kshitij Wardhan Ahirwar</strong>, a seasoned software developer with a passion for
+transforming ideas into powerful and innovative solutions. With a wealth of experience in the ever-evolving tech
+landscape, I bring a unique blend of creativity and technical expertise to every project.</p>
+<ul>
+<li><strong>Expertise:</strong> Backed by years of hands-on experience, I've honed my skills in a diverse range of
+  technologies and frameworks.</li>
+<li><strong>Innovation:</strong> I thrive on challenges and love bringing fresh perspectives to every project. Your
+  vision is the starting point for a journey of innovation.</li>
+<li><strong>Collaboration:</strong> Your success is my priority. I believe in open communication, collaborative
+  problem-solving, and a transparent approach throughout our partnership.</li>
+<li><strong>Results-Driven:</strong> My commitment goes beyond code. I'm dedicated to delivering solutions that not
+  only meet but exceed your expectations, ensuring tangible results for your business.</li>
+</ul>
+<h2>Let's Build Something Extraordinary!</h2>
+<p>Whether you're looking to streamline your business processes, create a stunning web presence, or embark on a
+groundbreaking software project, I'm here to guide you at every step. Let's connect and explore the endless
+possibilities.</p>
+
+<p>Ready to transform your ideas into reality? Let's build a future together!</p>
+</div>`,      
+textContent2:`Developers Information`,
+      },
+    ],    
   };
   
 export default config;

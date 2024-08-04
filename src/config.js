@@ -15,6 +15,7 @@ const config = {
     home_showDialog: false,
     home_dialog_title: "Request",
     home_dialog_content:"This site is under development. I want to know the public reviews so I can make it more better. Please explore the whole site and provide your valuable feedback. For giving feedback you can navigate to Contact page.",
+    home_showIntro: true,
 
     contactus_modeldata_title:  "Information",
     contactus_modeldata_careers_title:  "Want to contribute?",
