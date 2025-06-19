@@ -31,6 +31,7 @@ const config = {
     uri_javaLogical : '/learnings/java/java-logical',
     uri_hybrisquiz:'/quizes/hybris-quiz',
     uri_freerecharge:'/quizes/free-recharge',
+    uri_products_dixnary:'/products/dixnary',
 
     youtube_modeldata_message: "To to show your support please visit <a href='https://www.youtube.com/@kshitijwardhan' target='_blank' rel='noopener noreferrer'> Kshitij Wardhan Ahirwar </a> my youtube channel. Please do watch, like, comment, share & subscribe to my channel",
     youtubeVideosTechnology: [
