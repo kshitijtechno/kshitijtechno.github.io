@@ -1,8 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.62be9424.css",
-    "main.js": "/static/js/main.583e5a40.js",
+    "main.js": "/static/js/main.3cd6e042.js",
     "static/js/787.bd2101fc.chunk.js": "/static/js/787.bd2101fc.chunk.js",
+    "static/media/dixlogin.PNG": "/static/media/dixlogin.e26bce6edc875957cc32.PNG",
+    "static/media/dixsignup.PNG": "/static/media/dixsignup.3ecf6ba3b0762b9c746c.PNG",
+    "static/media/dix.PNG": "/static/media/dix.d5c25ed19f239117c8be.PNG",
     "static/media/image13.png": "/static/media/image13.40ed50d5a1aad1267186.png",
     "static/media/homepagebanner2.jpg": "/static/media/homepagebanner2.c641bc777a070dc61899.jpg",
     "static/media/image12.png": "/static/media/image12.7f93fc7bccbc9d16b176.png",
@@ -46,11 +49,11 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.62be9424.css.map": "/static/css/main.62be9424.css.map",
-    "main.583e5a40.js.map": "/static/js/main.583e5a40.js.map",
+    "main.3cd6e042.js.map": "/static/js/main.3cd6e042.js.map",
     "787.bd2101fc.chunk.js.map": "/static/js/787.bd2101fc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.62be9424.css",
-    "static/js/main.583e5a40.js"
+    "static/js/main.3cd6e042.js"
   ]
 }
