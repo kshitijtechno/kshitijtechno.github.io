@@ -17,6 +17,8 @@ import HybrisProjectImportIntellij from './Learnings/HybrisProjectImportIntellij
 import HybrisDataModeling from './Learnings/HybrisDataModeling';
 import HybrisQuiz from './Quizes/HybrisQuiz';
 import FreeRecharge from './Quizes/FreeRecharge';
+import Dixnary from './Products/Dixnary';
+
 
 
 
@@ -38,6 +40,8 @@ function App() {
             <Route path={config.uri_javaLogical} element={<div className="content"><JavaLogical /></div>} />
             <Route path={config.uri_hybrisquiz} element={<div className="content"><HybrisQuiz /></div>} />
             <Route path={config.uri_freerecharge} element={<div className="content"><FreeRecharge /></div>} />
+            <Route path={config.uri_products_dixnary} element={<div className="content"><Dixnary /></div>} />
+
 
             <Route path="/contactus" element={<div className="content"><ContactUs /></div>} />
             <Route path="/videos" element={<div className="content"><Videos /></div>} />
