@@ -15,8 +15,19 @@ const Footer = () => {
   fetch('/lastModified.txt')
     .then(response => response.text())
     .then(date => {
-      const parsedDate = new Date(date); // ISO string works perfectly
-      setLastModifiedDate(parsedDate.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }));
+      const parsedDate = new Date(date.trim()); // Remove any trailing newline
+      setLastModifiedDate(
+        parsedDate.toLocaleString('en-IN', {
+          timeZone: 'Asia/Kolkata',
+          hour12: true,   // 12-hour format
+          day: '2-digit',
+          month: '2-digit',
+          year: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit'
+        })
+      );
     })
     .catch(error => console.error('Error fetching last modified date:', error));
 }, []);
