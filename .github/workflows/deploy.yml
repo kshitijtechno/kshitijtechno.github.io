@@ -8,26 +8,36 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      # ✅ UPDATE LAST MODIFIED DATE (IST) — BEFORE BUILD
+      - name: Update last modified date (IST)
+        run: |
+          TZ=Asia/Kolkata date > public/lastModified.txt
+
+      - name: Commit last modified date
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/lastModified.txt
+          git commit -m "Update last modified date" || echo "No changes to commit"
+          git push
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'  # Use the same as your project, e.g., 18 or 20
+          node-version: '18'
 
       - name: Install dependencies
         run: npm install
 
       - name: Build project
         run: npm run build
-
-      - name: Configure Git
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Deploy to GitHub Pages
         env:
