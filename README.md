@@ -7,4 +7,9 @@ execute npm install gh-pages --save-dev
 execute npm run deploy 
 
 
+Upload apk:
+Update apk at location /assets
+Change name in /Products/Dixnary.js
+
+
 

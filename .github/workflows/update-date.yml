@@ -13,7 +13,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Update last modified date
-        run: echo "$(date)" > public/lastModified.txt
+        run: |
+          TZ=Asia/Kolkata date > public/lastModified.txt
+
 
       - name: Commit and push changes
         env:

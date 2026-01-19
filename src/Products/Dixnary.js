@@ -95,7 +95,7 @@ const Dixnary = () => {
                 variant="contained"
                 color="primary"
                 startIcon={<AndroidRoundedIcon />}
-                href="/assets/dixnary.apk"
+                href="/assets/dixnary-4.0.0.apk"
                 download
                 target="_blank"
                 size="large"
