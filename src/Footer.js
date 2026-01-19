@@ -12,15 +12,15 @@ const Footer = () => {
   const [lastModifiedDate, setLastModifiedDate] = useState('');
 
   useEffect(() => {
-    fetch('/lastModified.txt')
-      .then(response => response.text())
-      .then(date => {
-        const utcDate = new Date(date); // Assuming date format is compatible with Date constructor
-        const istDate = new Date(utcDate.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }));
-        setLastModifiedDate(istDate.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }));
-      })
-      .catch(error => console.error('Error fetching last modified date:', error));
-  }, []);
+  fetch('/lastModified.txt')
+    .then(response => response.text())
+    .then(date => {
+      const parsedDate = new Date(date); // ISO string works perfectly
+      setLastModifiedDate(parsedDate.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }));
+    })
+    .catch(error => console.error('Error fetching last modified date:', error));
+}, []);
+
 
   const handleIconClick = (event) => {
     if(event === "fb") {

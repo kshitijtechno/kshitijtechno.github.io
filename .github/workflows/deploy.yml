@@ -16,7 +16,7 @@ jobs:
       # ✅ Build-time last modified date (IST)
       - name: Update last modified date (IST)
         run: |
-          TZ=Asia/Kolkata date > public/lastModified.txt
+          TZ=Asia/Kolkata date -Iseconds > public/lastModified.txt
 
       - name: Set up Node.js
         uses: actions/setup-node@v3

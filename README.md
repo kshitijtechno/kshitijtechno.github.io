@@ -11,5 +11,8 @@ Upload apk:
 Update apk at location /assets
 Change name in /Products/Dixnary.js
 
+Deployment
+There is auto deployment
+
 
 
