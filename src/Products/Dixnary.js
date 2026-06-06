@@ -11,14 +11,15 @@ import {
 } from '@mui/material';
 import AndroidRoundedIcon from '@mui/icons-material/AndroidRounded';
 import ShareRoundedIcon from '@mui/icons-material/ShareRounded';
-import login from '../images/dixnary/dixlogin.PNG';
-import signup from '../images/dixnary/dixsignup.PNG';
-import dix from '../images/dixnary/dix.PNG';
+import HistoryRoundedIcon from '@mui/icons-material/HistoryRounded'; // New icon
+import img1 from '../images/dixnary/img1.jpeg';
+import img2 from '../images/dixnary/img2.jpeg';
+import img3 from '../images/dixnary/img3.jpeg';
 
 const screenshots = [
-  { src: login, alt: 'Login Screen' },
-  { src: signup, alt: 'Signup Screen' },
-  { src: dix, alt: 'Dictionary Screen' },
+  { src: img1, alt: 'NA' },
+  { src: img2, alt: 'NA' },
+  { src: img3, alt: 'NA' },
 ];
 
 const Dixnary = () => {
@@ -31,7 +32,7 @@ const Dixnary = () => {
       if (inputRef.current) {
         inputRef.current.select();
       }
-    }, 100); // wait for input to render
+    }, 100);
   };
 
   const shareUrl = window.location.href;
@@ -59,10 +60,6 @@ const Dixnary = () => {
                 <li>🪄 Set secret magic words to unlock exclusive content</li>
               </ul>
 
-              <Typography variant="body2" color="text.secondary">
-                Currently available for Android. Install the APK directly using the button below!
-              </Typography>
-
               <Grid container spacing={2} sx={{ mt: 3 }}>
                 {screenshots.map(({ src, alt }, i) => (
                   <Grid item xs={12} sm={4} key={i}>
@@ -75,32 +72,34 @@ const Dixnary = () => {
                         boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
                       }}
                     />
-                    <Typography
-                      variant="caption"
-                      align="center"
-                      display="block"
-                      sx={{ mt: 1 }}
-                    >
-                      {alt}
-                    </Typography>
                   </Grid>
                 ))}
               </Grid>
             </CardContent>
 
-            <CardActions
-              sx={{ justifyContent: 'center', flexWrap: 'wrap', gap: 2, pb: 2 }}
-            >
+            <CardActions sx={{ justifyContent: 'center', flexWrap: 'wrap', gap: 2, pb: 2 }}>
+              {/* Latest Version */}
               <Button
                 variant="contained"
                 color="primary"
                 startIcon={<AndroidRoundedIcon />}
-                href="/assets/dixnary-6.0.0.apk"
+                href="/assets/dixnary-7.0.0.apk"
                 download
-                target="_blank"
                 size="large"
               >
-                Download APP
+                Latest (7.0.0)
+              </Button>
+
+              {/* Previous Version */}
+              <Button
+                variant="contained"
+                color="info" // Use 'info' or 'warning' to distinguish
+                startIcon={<HistoryRoundedIcon />}
+                href="/assets/dixnary-6.0.0.apk"
+                download
+                size="large"
+              >
+                Previous (6.0.0)
               </Button>
 
               <Button
@@ -110,7 +109,7 @@ const Dixnary = () => {
                 onClick={handleShareClick}
                 size="large"
               >
-                Share App
+                Share
               </Button>
             </CardActions>
 
@@ -121,9 +120,7 @@ const Dixnary = () => {
                   inputRef={inputRef}
                   value={shareUrl}
                   variant="outlined"
-                  InputProps={{
-                    readOnly: true,
-                  }}
+                  InputProps={{ readOnly: true }}
                   onClick={() => inputRef.current.select()}
                 />
               </Grid>
