@@ -83,11 +83,11 @@ const Dixnary = () => {
                 variant="contained"
                 color="primary"
                 startIcon={<AndroidRoundedIcon />}
-                href="/assets/dixnary-7.0.0.apk"
+                href="/assets/dixnary-8.0.0.apk"
                 download
                 size="large"
               >
-                Latest (7.0.0)
+                Latest (8.0.0)
               </Button>
 
               {/* Previous Version */}
@@ -95,11 +95,11 @@ const Dixnary = () => {
                 variant="contained"
                 color="info" // Use 'info' or 'warning' to distinguish
                 startIcon={<HistoryRoundedIcon />}
-                href="/assets/dixnary-6.0.0.apk"
+                href="/assets/dixnary-7.0.0.apk"
                 download
                 size="large"
               >
-                Previous (6.0.0)
+                Previous (7.0.0)
               </Button>
 
               <Button
