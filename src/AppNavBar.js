@@ -87,6 +87,9 @@ const AppNavBar = () => {
                     <ListItem button component={Link} to={config.uri_products_dixnary} onClick={toggleDrawer(false)} style={{ paddingLeft: '40px' }}>
                       <ListItemText primary="Dixnary" />
                     </ListItem>
+                    <ListItem button component={Link} to={config.uri_products_gharkharcha} onClick={toggleDrawer(false)} style={{ paddingLeft: '40px' }}>
+                      <ListItemText primary="GharKharcha" />
+                    </ListItem>
                   </List>
                 </Collapse>
                 <ListItem button onClick={handleMenuOpen('hybris', setHybrisMenuOpen)} style={{ paddingLeft: '20px' }}>
@@ -159,6 +162,11 @@ const AppNavBar = () => {
               <MenuItem onClick={() => handleMenuClose(setProductMenuOpen)}>
                 <Button color="inherit" component={Link} to={config.uri_products_dixnary}>
                   Dixnary
+                </Button>
+              </MenuItem>
+              <MenuItem onClick={() => handleMenuClose(setProductMenuOpen)}>
+                <Button color="inherit" component={Link} to={config.uri_products_gharkharcha}>
+                  GharKharcha
                 </Button>
               </MenuItem>
             </Menu>

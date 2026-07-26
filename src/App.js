@@ -18,6 +18,8 @@ import HybrisDataModeling from './Learnings/HybrisDataModeling';
 import HybrisQuiz from './Quizes/HybrisQuiz';
 import FreeRecharge from './Quizes/FreeRecharge';
 import Dixnary from './Products/Dixnary';
+import GharKharcha from './Products/GharKharcha';
+import GharKharchaPrivacy from './Products/GharKharchaPrivacy';
 
 
 
@@ -41,6 +43,8 @@ function App() {
             <Route path={config.uri_hybrisquiz} element={<div className="content"><HybrisQuiz /></div>} />
             <Route path={config.uri_freerecharge} element={<div className="content"><FreeRecharge /></div>} />
             <Route path={config.uri_products_dixnary} element={<div className="content"><Dixnary /></div>} />
+            <Route path={config.uri_products_gharkharcha} element={<div className="content"><GharKharcha /></div>} />
+            <Route path={config.uri_privacy_gharkharcha} element={<div className="content"><GharKharchaPrivacy /></div>} />
 
 
             <Route path="/contactus" element={<div className="content"><ContactUs /></div>} />
