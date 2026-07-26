@@ -10,6 +10,7 @@ import {
   TextField,
   Chip,
 } from '@mui/material';
+import AndroidRoundedIcon from '@mui/icons-material/AndroidRounded';
 import ShareRoundedIcon from '@mui/icons-material/ShareRounded';
 import LockRoundedIcon from '@mui/icons-material/LockRounded';
 import { Link } from 'react-router-dom';
@@ -64,7 +65,7 @@ const GharKharcha = () => {
                   <Typography variant="h5">
                     GharKharcha App
                   </Typography>
-                  <Chip label="Coming soon to Google Play & App Store" size="small" color="primary" variant="outlined" sx={{ mt: 0.5 }} />
+                  <Chip label="Android APK — direct download" size="small" color="primary" variant="outlined" sx={{ mt: 0.5 }} />
                 </Grid>
               </Grid>
 
@@ -79,7 +80,18 @@ const GharKharcha = () => {
               </ul>
             </CardContent>
 
-            <CardActions sx={{ justifyContent: 'center', flexWrap: 'wrap', gap: 2, pb: 2 }}>
+            <CardActions sx={{ justifyContent: 'center', flexWrap: 'wrap', gap: 2, pb: 1 }}>
+              <Button
+                variant="contained"
+                color="primary"
+                startIcon={<AndroidRoundedIcon />}
+                href="/assets/gharkharcha-1.0.0.apk"
+                download
+                size="large"
+              >
+                Download (1.0.0)
+              </Button>
+
               <Button
                 variant="outlined"
                 color="secondary"
@@ -101,6 +113,10 @@ const GharKharcha = () => {
                 Share
               </Button>
             </CardActions>
+
+            <Typography variant="caption" color="text.secondary" align="center" sx={{ display: 'block', px: 2, pb: 2 }}>
+              This is a direct APK, not from the Play Store — your phone may ask you to allow "install from unknown sources" the first time.
+            </Typography>
 
             {showShareLink && (
               <Grid container justifyContent="center" sx={{ px: 2, pb: 3 }}>
