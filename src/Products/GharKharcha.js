@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import {
   Container,
   Typography,
@@ -18,6 +18,20 @@ import config from '../config';
 import TrackPageAnalytics from '../TrackPageAnalytics';
 import logo from '../images/gharkharcha/logo.png';
 
+// Same Supabase project the app itself talks to — this is the public anon key, safe to embed
+// client-side (same as it already is inside the app's own JS bundle). Reading it directly via
+// fetch avoids pulling the @supabase/supabase-js package into this site just for one read.
+const SUPABASE_URL = 'https://jebemcbwjlwepwrokvdy.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImplYmVtY2J3amx3ZXB3cm9rdmR5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIwNTA4ODcsImV4cCI6MjA5NzYyNjg4N30.SJkNIbryFAIQWT-7SMKBaAgz4b2Bfuy6TMaV8LBsKnA';
+
+// Fallback shown only until the fetch resolves (or if it ever fails) — kept in sync manually
+// as a last resort, but the `app_releases` row (edited from the Supabase dashboard whenever a
+// new build is cut) is the real source of truth once it loads. This is the same table the app
+// itself checks on launch to decide whether to block/nag a user onto a newer version — one
+// place to update per release, instead of this file too.
+const FALLBACK_VERSION = '1.0.0';
+const FALLBACK_APK_URL = '/assets/gharkharcha-1.0.0.apk';
+
 const features = [
   '🛒 Shared shopping list the whole family can add to and check off together',
   '💰 Expense tracking with rate, quantity, and who paid — plus PDF reports by day, month, or year',
@@ -30,6 +44,19 @@ const features = [
 const GharKharcha = () => {
   const [showShareLink, setShowShareLink] = useState(false);
   const inputRef = useRef(null);
+  const [release, setRelease] = useState(null);
+
+  useEffect(() => {
+    fetch(`${SUPABASE_URL}/rest/v1/app_releases?platform=eq.android&select=latest_version,download_url,release_notes`, {
+      headers: { apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${SUPABASE_ANON_KEY}` },
+    })
+      .then(res => res.json())
+      .then(rows => { if (Array.isArray(rows) && rows[0]) setRelease(rows[0]); })
+      .catch(() => {}); // silently keep the fallback constants above
+  }, []);
+
+  const displayVersion = release?.latest_version || FALLBACK_VERSION;
+  const apkUrl = release?.download_url || FALLBACK_APK_URL;
 
   const handleShareClick = () => {
     setShowShareLink(!showShareLink);
@@ -85,11 +112,11 @@ const GharKharcha = () => {
                 variant="contained"
                 color="primary"
                 startIcon={<AndroidRoundedIcon />}
-                href="/assets/gharkharcha-1.0.0.apk"
+                href={apkUrl}
                 download
                 size="large"
               >
-                Download (1.0.0)
+                Download ({displayVersion})
               </Button>
 
               <Button
@@ -114,9 +141,15 @@ const GharKharcha = () => {
               </Button>
             </CardActions>
 
-            <Typography variant="caption" color="text.secondary" align="center" sx={{ display: 'block', px: 2, pb: 2 }}>
+            <Typography variant="caption" color="text.secondary" align="center" sx={{ display: 'block', px: 2, pb: release?.release_notes ? 1 : 2 }}>
               This is a direct APK, not from the Play Store — your phone may ask you to allow "install from unknown sources" the first time.
             </Typography>
+
+            {!!release?.release_notes && (
+              <Typography variant="body2" color="text.secondary" align="center" sx={{ display: 'block', px: 2, pb: 2, fontStyle: 'italic' }}>
+                What's new in {displayVersion}: {release.release_notes}
+              </Typography>
+            )}
 
             {showShareLink && (
               <Grid container justifyContent="center" sx={{ px: 2, pb: 3 }}>
